@@ -1,0 +1,21 @@
+>div.{{class.header}}
+	@dblclick = scrollTop
+	>div.{{class.container}}
+		>div.{{class.logo_small}}
+			@click = goto:home
+		>div.{{class.logo}}#logo
+			@click = goto:home
+		>div.{{class.links}}
+			>div.{{class.wrapper}}
+				>div.{{class.examples}}
+					@click = goto:examples
+					.EXAMPLES
+				>div.{{class.api}}
+					@click = goto:api
+					.API
+				>div.{{class.guide}}
+					@click = goto:guide
+					.GUIDE
+				>div.{{class.home}}
+					@click = goto:home
+					.HOME

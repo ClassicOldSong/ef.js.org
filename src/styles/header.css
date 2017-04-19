@@ -1,0 +1,63 @@
+.header {
+	height: 60px;
+	width: 100%;
+	background: #000;
+	filter: drop-shadow(0 0 10px rgba(0,0,0,.5));
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	user-select: none;
+	/*backdrop-filter: blur(20px);*/
+}
+
+.logo {
+	height: 120px;
+	width: 120px;
+	background-image: url('images/logo.svg');
+	background-size: cover;
+	position: absolute;
+	cursor: pointer;
+	opacity: 1;
+	transition: opacity .5s;
+}
+
+.logo.hidden {
+	opacity: 0;
+	pointer-events: none;
+}
+
+.logo_small {
+	height: 60px;
+	width: 120px;
+	background-image: url('images/logo_small.svg');
+	background-size: cover;
+	float: left;
+	cursor: pointer;
+}
+
+.links {
+	float: right;
+	height: 100%;
+	overflow: auto;
+	max-width: calc(100% - 120px);
+}
+
+.wrapper {
+	height: 100%;
+	min-width: 300px;
+	padding: 0 10px;
+}
+
+.link {
+	height: 100%;
+	line-height: 60px;
+	float: right;
+	color: #FFF;
+	padding: 0 10px;
+	cursor: pointer;
+	border-bottom: 0 solid #FFB200;
+	transition: border-bottom 100ms;
+	&.selected, &:hover {
+		border-bottom: 5px solid #FFB200;
+	}
+}

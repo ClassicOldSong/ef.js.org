@@ -1,0 +1,8 @@
+Main body of the website
+>div.{{class.main}}
+	>div.{{class.container}}
+		>div.{{class.top}}
+			>div.{{class.js}}
+		-body
+	-footer
+	-header

@@ -1,0 +1,18 @@
+.top {
+	height: 140px;
+	padding-left: 114px;
+	padding-top: 56px;
+	font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+}
+
+.js {
+	height: 75px;
+	width: 75px;
+	background-image: url('images/js.svg');
+	background-size: cover;
+	float: left;
+}
+
+.main {
+	background: linear-gradient(#ffedc4, #ffb300);
+}

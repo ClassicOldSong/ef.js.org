@@ -1,0 +1,11 @@
+>div.{{class.footer}}
+	>div.{{class.copy}}
+		.ef.js is released under &
+		>b
+			>a.{{class.link}}
+				#target = _blank
+				#rel = noopener
+				#href = https://cos.mit-license.org/
+				.MIT License
+		>br
+		.Copyright © {{year}} Yukino Song

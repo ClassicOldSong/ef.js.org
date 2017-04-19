@@ -1,0 +1,17 @@
+.footer {
+	height: 150px;
+	background-color: #000;
+	color: #FFF;
+}
+
+.copy {
+	padding-top: 54px;
+	text-align: center;
+	line-height: 18px;
+	font-size: 14px;
+}
+
+.link {
+	color: #FFF;
+	text-decoration: none;
+}
