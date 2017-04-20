@@ -1,10 +1,12 @@
 >div.{{class.header}}
 	@dblclick = scrollTop
 	>div.{{class.container}}
-		>div.{{class.logo_small}}
-			@click = goto:home
-		>div.{{class.logo}}#logo
-			@click = goto:home
+		>div.{{class.logoBox}}
+			>div.{{class.logo}}
+		>div.{{class.logoBox}}
+			>div.{{class.logo}}#overlay
+				@click = goto:home
+				@transitionend = recover
 		>div.{{class.links}}
 			>div.{{class.wrapper}}
 				>div.{{class.examples}}

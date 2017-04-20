@@ -1,5 +1,5 @@
 // Import modules
-import { goto, changePage } from './router.js'
+import { goto } from './router.js'
 // Import style
 import classes from '../styles/header.css'
 import shared from '../styles/shared.css'
@@ -13,6 +13,9 @@ const header = _header.render({
 	$methods: {
 		goto({value}) {
 			goto(value)
+		},
+		recover() {
+			header.$nodes.overlay.classList.remove(classes.hidden)
 		}
 	}
 })
@@ -25,14 +28,5 @@ header.$data.class = {
 }
 
 header.$data.class = shared
-
-const updateScroll = () => {
-	if ((window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0) > 60) header.$data.class.logo = `${classes.logo} ${classes.hidden}`
-	else header.$data.class.logo = classes.logo
-}
-
-window.addEventListener('scroll', updateScroll)
-
-changePage(location.hash || '#!/home')
 
 export default header

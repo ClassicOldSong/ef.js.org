@@ -12,6 +12,6 @@ const home = _home.render({
 	}
 })
 
-home.$data.classes = classes
+home.$data.class = classes
 
 export default home
