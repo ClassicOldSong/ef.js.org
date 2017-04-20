@@ -8,6 +8,9 @@ import mainbody from './mainbody.js'
 import header from './header.js'
 import notfound from './404.js'
 import home from './home.js'
+import guide from './guide.js'
+import api from './api.js'
+import examples from './examples.js'
 
 window.mainbody = mainbody
 
@@ -31,17 +34,17 @@ const changePage = (path) => {
 	switch (path) {
 		case '#!/examples': {
 			newClasses.examples = classSelected
-			mainbody.body = null
+			mainbody.body = examples
 			break
 		}
 		case '#!/api': {
 			newClasses.api = classSelected
-			mainbody.body = null
+			mainbody.body = api
 			break
 		}
 		case '#!/guide': {
 			newClasses.guide = classSelected
-			mainbody.body = null
+			mainbody.body = guide
 			break
 		}
 		case '#!/home': {
