@@ -18,7 +18,7 @@ const info = {
 		repo: ''
 	},
 	site: {
-		src: location.origin,
+		src: `${location.origin}${location.pathname}`,
 		repo: ''
 	}
 }
