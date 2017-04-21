@@ -20,7 +20,7 @@ const ah = ({inPath, outPath, limit = 10240, build}) => {
 	klaw(inPath, {filter: excludeHidden})
 	.pipe(excludeDir)
 	.on('data', (item) => {
-		if (item.stats.size > limit || (/\.html?/).test(path.extname(item.path))) {
+		if (item.stats.size > limit || (/(\.html?|favicon\.(png|ico))$/).test(item.path)) {
 			const _path = path.relative(inPath, item.path)
 			const _inPath = path.normalize(`${inPath}/${_path}`)
 			const _outPath = path.normalize(`${outPath}/${_path}`)

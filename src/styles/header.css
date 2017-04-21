@@ -8,6 +8,15 @@
 	bottom: 0;
 	user-select: none;
 	/*backdrop-filter: blur(20px);*/
+	&:after {
+		content: '';
+		height: 4px;
+		width: 100%;
+		background-color: #FFB200;
+		position: absolute;
+		bottom: -2px;
+		z-index: 0;
+	};
 }
 
 .logoBox {
@@ -16,6 +25,7 @@
 	padding: 25px;
 	position: absolute;
 	transform: rotate(45deg);
+	z-index: 1;
 }
 
 .logo {
@@ -42,12 +52,13 @@
 	float: right;
 	height: 100%;
 	overflow: auto;
-	max-width: calc(100% - 120px);
+	max-width: calc(100% - 60px);
+	padding-left: 20px;
 }
 
 .wrapper {
 	height: 100%;
-	min-width: 300px;
+	min-width: 320px;
 	padding: 0 10px;
 }
 

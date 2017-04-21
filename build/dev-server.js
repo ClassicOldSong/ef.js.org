@@ -48,7 +48,7 @@ const assetHandler = ({filename, fileList}) => {
 	const hash = md5File.sync(filename)
 	if (fileList[filename] === hash) return true
 	fileList[filename] = hash
-	if ((/\.html?/).test(filename)) {
+	if ((/\.html?|favicon\.(png|ico)/).test(filename)) {
 		fs.copy(filename, `${devPath}/${path.relative(assets, filename)}`)
 		return false
 	}
