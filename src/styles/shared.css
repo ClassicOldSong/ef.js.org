@@ -6,12 +6,11 @@
 
 html {
 	font-family: Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif;
-	background-color: #000;
 }
 
 .body {
 	width: 100%;
-	height: calc(100vh - 140px);
+	min-height: calc(100vh - 140px);
 	padding: 0 18px;
 }
 

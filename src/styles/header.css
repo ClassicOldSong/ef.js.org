@@ -1,13 +1,12 @@
 .header {
 	height: 60px;
 	width: 100%;
-	background: #000;
-	filter: drop-shadow(2px 2px 10px rgba(0,0,0,.5));
+	box-shadow: 0 2px 10px rgba(0,0,0,.5);
+	background: rgba(255,255,255,0.8);
 	position: fixed;
 	top: 0;
 	bottom: 0;
 	user-select: none;
-	/*backdrop-filter: blur(20px);*/
 	&:after {
 		content: '';
 		height: 4px;
@@ -24,8 +23,15 @@
 	width: 120px;
 	padding: 25px;
 	position: absolute;
-	transform: rotate(45deg);
+	filter: drop-shadow(0 2px 10px rgba(0,0,0,.5));
 	z-index: 1;
+}
+
+.box {
+	height: 70px;
+	width: 70px;
+	position: absolute;
+	transform: rotate(45deg);
 }
 
 .logo {
@@ -66,7 +72,7 @@
 	height: 100%;
 	line-height: 60px;
 	float: right;
-	color: #FFF;
+	color: #000;
 	padding: 0 10px;
 	cursor: pointer;
 	border-bottom: 0 solid #FFB200;

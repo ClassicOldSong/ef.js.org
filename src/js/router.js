@@ -53,15 +53,15 @@ const changePage = (path) => {
 			break
 		}
 		default: {
+			notfound.$nodes.box.classList.remove(notfoundClass.hidden)
 			mainbody.body = notfound
-			setTimeout(() => {
-				notfound.$nodes.box.classList.add(notfoundClass.hidden)
-			}, 0)
+			window.requestAnimationFrame(() => notfound.$nodes.box.classList.add(notfoundClass.hidden))
 		}
 	}
 
 	header.$data.class = newClasses
-	header.$nodes.overlay.classList.add(headerClass.hidden)
+	header.$nodes.overlay.classList.remove(headerClass.hidden)
+	window.requestAnimationFrame(() => header.$nodes.overlay.classList.add(headerClass.hidden))
 }
 
 window.addEventListener('hashchange', () => changePage(location.hash))
