@@ -52,5 +52,7 @@
     "shelljs": "^0.7.5",
     "through2": "^2.0.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "ef.js": "^0.1.4-alpha.2"
+  }
 }

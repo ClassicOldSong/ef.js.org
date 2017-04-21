@@ -7,5 +7,5 @@ module.exports = {
 	limit: 10240,
 	b64svg: false,
 	format: 'iife',
-	sourceMap: 'inline'
+	sourceMap: true
 }
