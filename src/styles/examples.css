@@ -1,0 +1,23 @@
+.list {
+	float: left;
+	width: 160px;
+	border-right: 4px solid #FFB200;
+	padding-left: 10px;
+	list-style: none;
+}
+
+.item {
+	height: 40px;
+	line-height: 40px;
+	border-right: 0 solid #FFB200;
+	transition: border-right 100ms;
+	&:hover, &.selected {
+		border-right: 4px solid #FFB200;
+	};
+}
+
+.show {
+	border: 0;
+	width: calc(100% - 160px);
+	height: 640px;
+}

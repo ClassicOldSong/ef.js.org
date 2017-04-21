@@ -1,2 +1,14 @@
 >div.{{class.body}}
-	.examples
+	>ul.{{class.list}}#list
+		>li.{{class.todo}}
+			.TodoMVC
+			@click = show:todo
+		>li.{{class.dbmon}}
+			.dbmon
+			@click = show:dbmon
+		>li.{{class.site}}
+			.ef.js.org
+			@click = show:site
+	>div.{{class.showbox}}
+		>iframe.{{class.show}}
+			#src = {{src}}
