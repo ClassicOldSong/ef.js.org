@@ -67,6 +67,7 @@ const changePage = (path) => {
 }
 
 header.$methods.goto = goto
+examples.$methods.open = open
 home.$methods = { goto, open }
 
 window.addEventListener('hashchange', () => changePage(location.hash))

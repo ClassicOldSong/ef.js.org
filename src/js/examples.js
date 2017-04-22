@@ -1,5 +1,3 @@
-// Import utils
-import { open } from './router.js'
 // Import style
 import sharedClasses from '../styles/shared.css'
 import classes from '../styles/examples.css'
@@ -46,7 +44,7 @@ const examples = _examples.render({
 	$data: {
 		class: sharedClasses
 	},
-	$methods: { show, open }
+	$methods: { show }
 })
 
 examples.$data.class = classes
