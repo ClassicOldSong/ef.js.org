@@ -18,10 +18,12 @@ console.log(mainbody)
 
 const classSelected = `${headerClass.link} ${headerClass.selected}`
 
-const goto = (path) => {
-	if (!(/^#!\//).test(path)) path = `#!/${path}`
-	window.location.hash = path
+const goto = ({value}) => {
+	if (!(/^#!\//).test(value)) value = `#!/${value}`
+	window.location.hash = value
 }
+
+const open = ({value}) => window.open(value)
 
 const changePage = (path) => {
 	const newClasses = {
@@ -64,12 +66,15 @@ const changePage = (path) => {
 	window.requestAnimationFrame(() => header.$nodes.overlay.classList.add(headerClass.hidden))
 }
 
+header.$methods.goto = goto
+home.$methods = { goto, open }
+
 window.addEventListener('hashchange', () => changePage(location.hash))
 
 const init = () => {
 	document.querySelector('body').appendChild(mainbody.$element)
 	if (location.hash) changePage(location.hash)
-	else goto('home')
+	else goto({value: 'home'})
 	header.$nodes.overlay.classList.remove(headerClass.hidden)
 }
 
@@ -82,4 +87,4 @@ window.addEventListener('load', onload)
 
 domReady(init)
 
-export { goto, changePage }
+export { goto, open, changePage }

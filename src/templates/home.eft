@@ -1,2 +1,37 @@
 >div.{{class.body}}
-	.home
+	>div.{{class.block}}
+	>div.{{class.block}}
+	>div.{{class.block}}
+	>div.{{class.block}}
+	>div.{{class.infoBox}}#box
+		>div.{{class.textBox}}
+			>div.{{class.contentBox}}
+				>div.{{class.titles}}#titles
+					>div.{{class.titleBox}}
+						>div.{{class.title}}
+							.Instinctive
+						>div.{{class.title}}
+							.Simple
+						>div.{{class.title}}
+							.Light
+						>div.{{class.title}}
+							.Fast
+				>div.{{class.captions}}#captions
+					>div.{{class.captionBox}}
+						>div.{{class.caption}}
+							.Do what you think it should do.
+						>div.{{class.caption}}
+							.No logic in template, no DOM in script.
+						>div.{{class.caption}}
+							.7kb gzipped.
+						>div.{{class.caption}}
+							.Direct binding, no virtualdom, no diff.
+				>div.{{class.buttons}}
+					>div.{{class.button}}
+						@click = goto:guide
+						.Quick Start
+					>div.{{class.button}}
+						@click = open:https://github.com/ClassicOldSong/ef.js
+						.GitHub
+		>div.{{class.logoBox}}
+			>div.{{class.logo}}#logo

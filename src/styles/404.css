@@ -32,11 +32,11 @@
 	border-image-slice: 1;
 	background-color: #FFF;
 	box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.5);
-	transform: rotate(45deg);
+	transform: rotate(45deg) scale(1) translate3d(0px, 0px, 0px);
 }
 
 .logo.hidden {
-	transform: rotate(45deg) scale(1.5);
+	transform: rotate(45deg) scale(1.5) translate3d(0px, 0px, 0px);
 	opacity: 0;
 	transition: transform .5s, opacity .5s;
 }

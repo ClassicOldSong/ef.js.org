@@ -1,0 +1,151 @@
+.infoBox {
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 80px;
+	height: calc(100vh - 140px);
+	max-width: 1164px;
+	width: calc(100% - 36px);
+	transform: translate3d(50px, 0px, 0px);
+}
+
+.logoBox {
+	z-index: 1;
+	order: 1;
+	flex: 1 1;
+	flex-shrink: 0;
+	max-height: 280px;
+	min-height: 280px;
+	max-width: 280px;
+	min-width: 280px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.logo {
+	flex: 1 1;
+	flex-shrink: 0;
+	max-height: 280px;
+	min-height: 280px;
+	max-width: 280px;
+	min-width: 280px;
+	border: 68px solid #FFB200;
+	background-color: #FFF;
+}
+
+.textBox {
+	order: 2;
+	flex: 1 1;
+	height: 100%;
+	max-width: 500px;
+	width: 100%;
+}
+
+.contentBox {
+	height: 100%;
+	width: calc(100% + 90px);
+	position: relative;
+	left: -140px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	&>* {
+		flex: 1 1;
+		flex-grow: 0;
+	}
+}
+
+.titles {
+	height: 80px;
+	width: 100%;
+	line-height: 80px;
+	font-size: 60px;
+	overflow: hidden;
+	min-height: 80px;
+	.titleBox {
+		padding-left: 140px;
+		max-width: 2140px;
+		width: calc(400vw + 140px);
+		.title {
+			max-width: 500px;
+			width: calc(100vw - 36px);
+			padding-left: 62px;
+			float: left;
+		}
+	}
+}
+
+.captions {
+	height: 40px;
+	width: 100%;
+	line-height: 20px;
+	font-size: 20px;
+	overflow: hidden;
+	min-height: 40px;
+	margin: 10px 0;
+	.captionBox {
+		padding-left: 140px;
+		max-width: 2140px;
+		width: calc(400vw + 140px);
+		.caption {
+			max-width: 500px;
+			width: calc(100vw - 36px);
+			padding-left: 65px;
+			float: left;
+		}
+	}
+}
+
+.buttons {
+	padding-left: 66px;
+	.button {
+		float: left;
+		border: 0;
+		height: 60px;
+		line-height: 58px;
+		font-size: 20px;
+		padding: 0 15px;
+		margin: 0 10px;
+		outline: none;
+		border: 1px solid #FFB200;
+		background-color: #FFF;
+		transition: border-bottom 100ms;
+		cursor: pointer;
+		&:hover {
+			border-bottom: 5px solid #FFB200;
+		};
+	}
+}
+
+.block {
+	height: 100vh;
+	width: 100%;
+	pointer-events: none;
+}
+
+@media screen and (max-width: 640px) {
+	.infoBox {
+		flex-direction: column;
+		transform: translate3d(0px, 0px, 0px);
+	}
+
+	.textBox {
+		height: auto;
+	}
+
+	.contentBox {
+		z-index: 1;
+		width: calc(100% + 140px);
+	}
+
+	.captions .captionBox .caption, .titles .titleBox .title {
+		padding-left: 0;
+	}
+
+	.buttons {
+		padding-left: 140px;
+	}
+}

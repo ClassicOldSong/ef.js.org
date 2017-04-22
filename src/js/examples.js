@@ -1,5 +1,5 @@
 // Import utils
-import { open } from './utils/shared.js'
+import { open } from './router.js'
 // Import style
 import sharedClasses from '../styles/shared.css'
 import classes from '../styles/examples.css'

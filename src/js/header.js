@@ -1,5 +1,3 @@
-// Import modules
-import { goto } from './router.js'
 // Import style
 import classes from '../styles/header.css'
 import shared from '../styles/shared.css'
@@ -11,9 +9,6 @@ const header = _header.render({
 		class: classes
 	},
 	$methods: {
-		goto({value}) {
-			goto(value)
-		},
 		recover() {
 			header.$nodes.overlay.classList.remove(classes.hidden)
 		}
