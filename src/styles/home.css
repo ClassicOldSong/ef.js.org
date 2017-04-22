@@ -132,6 +132,10 @@
 		transform: translate3d(0px, 0px, 0px);
 	}
 
+	.logoBox {
+		z-index: 0;
+	}
+
 	.textBox {
 		height: auto;
 	}
