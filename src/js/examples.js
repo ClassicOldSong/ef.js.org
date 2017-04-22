@@ -1,3 +1,5 @@
+// Import utils
+import { open } from './utils/shared.js'
 // Import style
 import sharedClasses from '../styles/shared.css'
 import classes from '../styles/examples.css'
@@ -39,8 +41,6 @@ const info = {
 const show = ({state, value}) => {
 	state.$data = info[value]
 }
-
-const open = ({value}) => window.open(value)
 
 const examples = _examples.render({
 	$data: {

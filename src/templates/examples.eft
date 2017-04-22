@@ -11,11 +11,13 @@
 			@click = show:site
 		>li.{{class.split}}
 		>li.{{class.item}}
-			.New window
 			@click = open:{{src}}
+			.Open External
+			>i.iconfont.icon-external
 		>li.{{class.item}}
-			.Repository
 			@click = open:{{repo}}
+			.Repository
+			>i.iconfont.icon-external
 	>div.{{class.showbox}}
 		>iframe.{{class.show}}
 			#src = {{src}}
