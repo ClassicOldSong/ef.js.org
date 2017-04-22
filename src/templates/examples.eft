@@ -9,6 +9,13 @@
 		>li.{{class.site}}
 			.ef.js.org
 			@click = show:site
+		>li.{{class.split}}
+		>li.{{class.item}}
+			.New window
+			@click = open:{{src}}
+		>li.{{class.item}}
+			.Repository
+			@click = open:{{repo}}
 	>div.{{class.showbox}}
 		>iframe.{{class.show}}
 			#src = {{src}}

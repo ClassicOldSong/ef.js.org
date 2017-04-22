@@ -2,18 +2,26 @@
 	float: left;
 	width: 160px;
 	border-right: 4px solid #FFB200;
-	padding-left: 10px;
 	list-style: none;
+	margin-bottom: 5px;
 }
 
 .item {
 	height: 40px;
 	line-height: 40px;
+	padding-left: 10px;
 	border-right: 0 solid #FFB200;
 	transition: border-right 100ms;
+	cursor: pointer;
 	&:hover, &.selected {
 		border-right: 4px solid #FFB200;
 	};
+}
+
+.split {
+	height: 1px;
+	width: 100%;
+	background-color: #CCC;
 }
 
 .show {
@@ -21,7 +29,6 @@
 	width: calc(100% - 160px);
 	height: 640px;
 }
-
 
 @media screen and (max-width: 640px) {
 	.list {

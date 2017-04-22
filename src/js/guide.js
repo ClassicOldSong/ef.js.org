@@ -1,5 +1,3 @@
-// Import utils
-// Import modules
 // Import style
 import sharedClasses from '../styles/shared.css'
 import classes from '../styles/guide.css'
