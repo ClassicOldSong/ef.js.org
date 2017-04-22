@@ -3,8 +3,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	top: 80px;
-	height: calc(100vh - 140px);
+	height: 100vh;
 	max-width: 1164px;
 	width: calc(100% - 36px);
 	transform: translate3d(50px, 0px, 0px);
@@ -22,6 +21,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	filter: drop-shadow(0 10px 40px rgba(0,0,0,.5));
 }
 
 .logo {
@@ -33,6 +33,7 @@
 	min-width: 280px;
 	border: 68px solid #FFB200;
 	background-color: #FFF;
+	box-shadow: inset 0 0 60px rgba(0,0,0,.5);
 }
 
 .textBox {
@@ -59,12 +60,13 @@
 }
 
 .titles {
-	height: 80px;
+	height: 100px;
 	width: 100%;
-	line-height: 80px;
-	font-size: 60px;
+	line-height: 100px;
+	font-size: 80px;
 	overflow: hidden;
-	min-height: 80px;
+	min-height: 100px;
+	font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
 	.titleBox {
 		padding-left: 140px;
 		max-width: 2140px;
@@ -85,7 +87,7 @@
 	font-size: 20px;
 	overflow: hidden;
 	min-height: 40px;
-	margin: 10px 0;
+	margin-bottom: 10px;
 	.captionBox {
 		padding-left: 140px;
 		max-width: 2140px;
@@ -101,43 +103,58 @@
 
 .buttons {
 	padding-left: 66px;
+	user-select: none;
 	.button {
 		float: left;
 		border: 0;
-		height: 60px;
-		line-height: 58px;
+		height: 50px;
+		line-height: 50px;
 		font-size: 20px;
 		padding: 0 15px;
 		margin: 0 10px;
 		outline: none;
-		border: 1px solid #FFB200;
-		background-color: #FFF;
-		transition: border-bottom 100ms;
+		border-bottom: 0 solid #FFB200;
+		background-color: rgba(255,255,255,.7);
+		box-shadow: 0 5px 20px rgba(0,0,0,.5);
+		transition: border-bottom 200ms, box-shadow 200ms;
 		cursor: pointer;
 		&:hover {
 			border-bottom: 5px solid #FFB200;
+			box-shadow: 0 10px 30px rgba(0,0,0,.5);
 		};
 	}
 }
 
 .block {
-	height: 100vh;
+	height: 400vh;
 	width: 100%;
-	pointer-events: none;
 }
 
 @media screen and (max-width: 640px) {
 	.infoBox {
 		flex-direction: column;
+    justify-content: space-between;
 		transform: translate3d(0px, 0px, 0px);
 	}
 
 	.logoBox {
 		z-index: 0;
+		min-height: 220px;
+		min-width: 220px;
+		transform: translate3d(0px, 120px, 0px);
+	}
+
+	.logo {
+		max-height: 220px;
+		min-height: 220px;
+		max-width: 220px;
+		min-width: 220px;
+		border-width: 53px;
 	}
 
 	.textBox {
 		height: auto;
+		overflow: hidden;
 	}
 
 	.contentBox {
@@ -146,7 +163,13 @@
 	}
 
 	.captions .captionBox .caption, .titles .titleBox .title {
-		padding-left: 0;
+		padding-left: 5px;
+	}
+
+	.titles {
+		font-size: 60px;
+		min-height: 80px;
+		line-height: 80px;
 	}
 
 	.buttons {

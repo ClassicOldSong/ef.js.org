@@ -28,6 +28,7 @@
 	border: 0;
 	width: calc(100% - 160px);
 	height: 640px;
+	background-color: #FFF;
 }
 
 @media screen and (max-width: 640px) {

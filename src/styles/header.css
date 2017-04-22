@@ -2,11 +2,18 @@
 	height: 60px;
 	width: 100%;
 	box-shadow: 0 2px 10px rgba(0,0,0,.5);
-	background: rgba(255,255,255,0.7);
 	position: fixed;
 	top: 0;
 	bottom: 0;
 	user-select: none;
+	&:before {
+		content: '';
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		backdrop-filter: blur(20px);
+		background: rgba(255,255,255,0.7);
+	};
 	&:after {
 		content: '';
 		height: 4px;
@@ -44,12 +51,12 @@
 	background-color: #FFF;
 	box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.5);
 	cursor: pointer;
-	transform: scale(1) translate3d(0px, 0px, 0px);
+	transform: scale(1);
 	opacity: 1;
 }
 
 .logo.hidden {
-	transform: scale(2)  translate3d(0px, 0px, 0px);
+	transform: scale(2) ;
 	opacity: 0;
 	transition: transform .5s, opacity .5s;
 }

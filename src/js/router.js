@@ -21,6 +21,7 @@ const classSelected = `${headerClass.link} ${headerClass.selected}`
 const goto = ({value}) => {
 	if (!(/^#!\//).test(value)) value = `#!/${value}`
 	window.location.hash = value
+	window.scrollTo(0, 0)
 }
 
 const open = ({value}) => window.open(value)

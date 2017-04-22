@@ -1,13 +1,10 @@
 >div.{{class.body}}
 	>div.{{class.block}}
-	>div.{{class.block}}
-	>div.{{class.block}}
-	>div.{{class.block}}
 	>div.{{class.infoBox}}#box
 		>div.{{class.textBox}}
 			>div.{{class.contentBox}}
-				>div.{{class.titles}}#titles
-					>div.{{class.titleBox}}
+				>div.{{class.titles}}
+					>div.{{class.titleBox}}#titles
 						>div.{{class.title}}
 							.Instinctive
 						>div.{{class.title}}
@@ -16,8 +13,8 @@
 							.Light
 						>div.{{class.title}}
 							.Fast
-				>div.{{class.captions}}#captions
-					>div.{{class.captionBox}}
+				>div.{{class.captions}}
+					>div.{{class.captionBox}}#captions
 						>div.{{class.caption}}
 							.Do what you think it should do.
 						>div.{{class.caption}}
