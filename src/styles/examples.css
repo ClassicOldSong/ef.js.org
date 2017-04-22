@@ -21,3 +21,14 @@
 	width: calc(100% - 160px);
 	height: 640px;
 }
+
+
+@media screen and (max-width: 640px) {
+	.list {
+		width: 100%;
+	}
+
+	.show {
+		width: 100%;
+	}
+}
