@@ -31,9 +31,13 @@
 	min-height: 280px;
 	max-width: 280px;
 	min-width: 280px;
-	border: 68px solid #FFB200;
 	background-color: #FFF;
 	box-shadow: inset 0 0 60px rgba(0,0,0,.5);
+	transform: rotateZ(45deg);
+	border-width: 68px;
+	border-style: solid;
+	border-image: linear-gradient(to bottom right,#ffd575,#f5ab00);
+	border-image-slice: 1;
 }
 
 .textBox {

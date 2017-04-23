@@ -28,7 +28,7 @@ const updateScroll = () => {
 	}
 	if (width > 500) width = 500
 	const scrollLeft = `translate3d(-${height / window.innerHeight * width}px, 0px, 0px)`
-	home.$nodes.logo.style.transform = `rotateZ(${height / window.innerHeight * 90 + 45}deg) translate3d(0px, 0px, 0px)`
+	// home.$nodes.logo.style.transform = `rotateZ(${height / window.innerHeight * 90 + 45}deg) translate3d(0px, 0px, 0px)`
 	home.$nodes.titles.style.transform = scrollLeft
 	home.$nodes.captions.style.transform = scrollLeft
 }
