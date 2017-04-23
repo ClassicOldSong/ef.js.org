@@ -16,7 +16,7 @@
 				>div.{{class.captions}}
 					>div.{{class.captionBox}}#captions
 						>div.{{class.caption}}
-							.Do what you think it should do.
+							.Do what you believe it should do.
 						>div.{{class.caption}}
 							.No logic in template, no DOM in script.
 						>div.{{class.caption}}
