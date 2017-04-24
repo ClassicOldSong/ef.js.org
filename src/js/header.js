@@ -10,7 +10,7 @@ const header = _header.render({
 	},
 	$methods: {
 		recover() {
-			header.$nodes.overlay.classList.remove(classes.hidden)
+			header.$refs.overlay.classList.remove(classes.hidden)
 		}
 	}
 })

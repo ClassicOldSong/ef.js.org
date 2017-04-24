@@ -10,7 +10,7 @@ const notfound = _notfound.render({
 	},
 	$methods: {
 		recover() {
-			notfound.$nodes.box.classList.remove(classes.hidden)
+			notfound.$refs.box.classList.remove(classes.hidden)
 		}
 	}
 })

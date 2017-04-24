@@ -56,15 +56,15 @@ const changePage = (path) => {
 			break
 		}
 		default: {
-			notfound.$nodes.box.classList.remove(notfoundClass.hidden)
+			notfound.$refs.box.classList.remove(notfoundClass.hidden)
 			mainbody.body = notfound
-			window.requestAnimationFrame(() => notfound.$nodes.box.classList.add(notfoundClass.hidden))
+			window.requestAnimationFrame(() => notfound.$refs.box.classList.add(notfoundClass.hidden))
 		}
 	}
 
 	header.$data.class = newClasses
-	header.$nodes.overlay.classList.remove(headerClass.hidden)
-	window.requestAnimationFrame(() => header.$nodes.overlay.classList.add(headerClass.hidden))
+	header.$refs.overlay.classList.remove(headerClass.hidden)
+	window.requestAnimationFrame(() => header.$refs.overlay.classList.add(headerClass.hidden))
 }
 
 header.$methods.goto = goto
@@ -77,12 +77,12 @@ const init = () => {
 	document.querySelector('body').appendChild(mainbody.$element)
 	if (location.hash) changePage(location.hash)
 	else goto({value: 'home'})
-	header.$nodes.overlay.classList.remove(headerClass.hidden)
+	header.$refs.overlay.classList.remove(headerClass.hidden)
 }
 
 const onload = () => {
 	window.removeEventListener('load', onload)
-	header.$nodes.overlay.classList.add(headerClass.hidden)
+	header.$refs.overlay.classList.add(headerClass.hidden)
 }
 
 window.addEventListener('load', onload)

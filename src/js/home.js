@@ -19,18 +19,18 @@ const updateScroll = () => {
 	let width = window.innerWidth - 36
 
 	if (height > window.innerHeight * 3) {
-		home.$nodes.box.style.position = 'absolute'
-		home.$nodes.box.style.top = `${window.innerHeight * 3}px`
+		home.$refs.box.style.position = 'absolute'
+		home.$refs.box.style.top = `${window.innerHeight * 3}px`
 		height = window.innerHeight * 3
 	} else {
-		home.$nodes.box.style.position = 'fixed'
-		home.$nodes.box.style.top = '0'
+		home.$refs.box.style.position = 'fixed'
+		home.$refs.box.style.top = '0'
 	}
 	if (width > 500) width = 500
 	const scrollLeft = `translate3d(-${height / window.innerHeight * width}px, 0px, 0px)`
-	// home.$nodes.logo.style.transform = `rotateZ(${height / window.innerHeight * 90 + 45}deg) translate3d(0px, 0px, 0px)`
-	home.$nodes.titles.style.transform = scrollLeft
-	home.$nodes.captions.style.transform = scrollLeft
+	// home.$refs.logo.style.transform = `rotateZ(${height / window.innerHeight * 90 + 45}deg) translate3d(0px, 0px, 0px)`
+	home.$refs.titles.style.transform = scrollLeft
+	home.$refs.captions.style.transform = scrollLeft
 }
 
 window.addEventListener('scroll', updateScroll)

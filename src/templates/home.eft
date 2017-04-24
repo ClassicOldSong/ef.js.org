@@ -20,7 +20,7 @@
 						>div.{{class.caption}}
 							.No logic in template, no DOM in script.
 						>div.{{class.caption}}
-							.7kb gzipped.
+							.Only 7kb gzipped.
 						>div.{{class.caption}}
 							.Direct binding, no virtualdom, no diff.
 				>div.{{class.buttons}}
@@ -31,4 +31,4 @@
 						@click = open:https://github.com/ClassicOldSong/ef.js
 						.GitHub
 		>div.{{class.logoBox}}
-			>div.{{class.logo}}#logo
+			>div.{{class.logo}}

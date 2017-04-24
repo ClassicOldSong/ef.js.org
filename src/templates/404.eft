@@ -11,4 +11,6 @@
 					>div.{{class.info}}
 						.!
 	>p.{{class.msg}}
-		.Not Found
+		.Oops!
+		>br
+		.Nothing seems to be here...

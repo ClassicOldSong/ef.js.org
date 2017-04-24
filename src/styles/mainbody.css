@@ -12,6 +12,6 @@
 }
 
 .main {
-	background: url(https://www.toptal.com/designers/subtlepatterns/patterns/sayagata-400px.png);
+	background: url('./images/bg.png');
 	overflow: hidden;
 }
