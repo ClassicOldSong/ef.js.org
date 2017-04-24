@@ -1,2 +1,4 @@
 >div.{{class.body}}
-	.api
+	>a
+		#href = #api
+		.api
