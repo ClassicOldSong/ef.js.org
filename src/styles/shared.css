@@ -12,7 +12,8 @@ html {
 .body {
 	width: 100%;
 	min-height: calc(100vh - 140px);
-	padding: 0 18px;
+	padding: 0 18px 48px;
+	overflow: hidden;
 }
 
 .container {
@@ -21,4 +22,74 @@ html {
 	max-width: 1200px;
 	position: relative;
 	margin: 0 auto;
+}
+
+.list {
+	float: left;
+	position: fixed;
+	max-height: calc(100vh - 140px);
+	max-width: calc(100vw - 36px);
+	width: 200px;
+	border-right: 4px solid #FFB200;
+	list-style: none;
+	background-color: rgba(255,255,255,.7);
+	overflow: auto;
+}
+
+.expand {
+	position: fixed;
+	bottom: 0;
+	height: 30px;
+	width: 100%;
+	max-width: calc(100vw - 36px);
+	line-height: 30px;
+	font-size: 20px;
+	padding-left: 10px;
+	background-color: #FFB200;
+	display: none;
+	z-index: 1;
+}
+
+.item {
+	min-height: 40px;
+	line-height: 40px;
+	padding-left: 10px;
+	border-right: 0 solid #FFB200;
+	transition: border-right 100ms;
+	cursor: pointer;
+	&:hover, &.selected {
+		border-right: 4px solid #FFB200;
+	};
+}
+
+.showbox {
+	width: calc(100% - 200px);
+	float: right;
+}
+
+@media screen and (max-width: 640px) {
+	.list {
+		bottom: 0;
+		padding-bottom: 30px;
+		width: 100%;
+		border-right: 0;
+		border-top: 4px solid #FFB200;
+		max-height: 30px;
+		background-color: #FFF;
+		box-shadow: 0 3px 10px rgba(0,0,0,.3);
+		transition: max-height .5s;
+		overflow: hidden;
+		&:hover {
+			max-height: calc(100vh - 140px);
+			overflow: auto;
+		}
+	}
+
+	.expand {
+		display: block;
+	}
+
+	.showbox {
+		width: 100%;
+	}
 }

@@ -1,2 +1,9 @@
 >div.{{class.body}}
-	.guide {{ref}}
+	>ul.{{class.list}}#index
+		>li.{{class.expand}}
+			.» Index
+		+indexes
+	>div.{{class.showbox}}
+		>h1.{{class.title}}
+			.Guiding {{ref}}
+		+sections

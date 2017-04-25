@@ -13,8 +13,6 @@ import guide from './guide.js'
 import api from './api.js'
 import examples from './examples.js'
 
-// page('/#!')
-
 window.mainbody = mainbody
 
 console.log(mainbody)
@@ -22,8 +20,8 @@ console.log(mainbody)
 const classSelected = `${headerClass.link} ${headerClass.selected}`
 
 const goto = ({value}) => {
-	page(value)
 	window.scrollTo(0, 0)
+	page(value)
 }
 
 const open = ({value}) => window.open(value)
@@ -78,8 +76,6 @@ page({hashbang: true})
 header.$methods.goto = goto
 examples.$methods.open = open
 home.$methods = { goto, open }
-
-// window.addEventListener('hashchange', () => changePage(location.hash))
 
 const init = () => {
 	document.querySelector('body').appendChild(mainbody.$element)

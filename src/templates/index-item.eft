@@ -1,0 +1,3 @@
+>li.{{class}}
+	@click = show:{{ref}}
+	.{{title}}

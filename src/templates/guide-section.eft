@@ -1,0 +1,5 @@
+>section
+	>h1
+		.{{title}}
+	>p
+		%innerHTML = {{content}}

@@ -1,5 +1,4 @@
 >div.{{class.header}}
-	@dblclick = scrollTop
 	>div.{{class.container}}
 		>div.{{class.logoBox}}
 			>div.{{class.box}}

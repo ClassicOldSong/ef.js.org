@@ -1,5 +1,7 @@
 >div.{{class.body}}
-	>ul.{{class.list}}#list
+	>ul.{{class.list}}#index
+		>li.{{class.expand}}
+			.» Index
 		>li.{{class.todo}}
 			.TodoMVC
 			@click = show:todo

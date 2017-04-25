@@ -4,7 +4,7 @@ import classes from '../styles/examples.css'
 // Import template
 import _examples from '../templates/examples.eft'
 
-const selected = `${classes.item} ${classes.selected}`
+const selected = `${sharedClasses.item} ${sharedClasses.selected}`
 
 const info = {
 	todo: {
@@ -12,25 +12,25 @@ const info = {
 		repo: 'https://github.com/ClassicOldSong/todomvc-efjs',
 		class: {
 			todo: selected,
-			dbmon: classes.item,
-			site: classes.item
+			dbmon: sharedClasses.item,
+			site: sharedClasses.item
 		}
 	},
 	dbmon: {
 		src: 'https://classicoldsong.github.io/js-repaint-perfs/ef/index.html',
 		repo: 'https://github.com/ClassicOldSong/js-repaint-perfs',
 		class: {
-			todo: classes.item,
+			todo: sharedClasses.item,
 			dbmon: selected,
-			site: classes.item
+			site: sharedClasses.item
 		}
 	},
 	site: {
 		src: `${location.origin}${location.pathname}`,
 		repo: 'https://github.com/ClassicOldSong/ef.js.org',
 		class: {
-			todo: classes.item,
-			dbmon: classes.item,
+			todo: sharedClasses.item,
+			dbmon: sharedClasses.item,
 			site: selected
 		}
 	}
@@ -49,5 +49,19 @@ const examples = _examples.render({
 
 examples.$data.class = classes
 show({state: examples, value: 'todo'})
+
+const updateScroll = () => {
+	const height = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
+	console.log(height)
+	if (document.body.scrollHeight - window.innerHeight - height < 150 && window.innerWidth > 640) {
+		examples.$refs.index.style.position = 'absolute'
+		examples.$refs.index.style.top = `${document.body.scrollHeight - window.innerHeight - 10}px`
+	} else {
+		examples.$refs.index.style.position = 'fixed'
+		examples.$refs.index.style.top = 'initial'
+	}
+}
+
+window.addEventListener('scroll', updateScroll)
 
 export default examples
