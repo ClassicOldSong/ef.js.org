@@ -100,7 +100,6 @@ guide.$data.class = classes
 
 const updateScroll = () => {
 	const height = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
-	console.log(height)
 	if (document.body.scrollHeight - window.innerHeight - height < 150 && window.innerWidth > 640) {
 		guide.$refs.index.style.position = 'absolute'
 		guide.$refs.index.style.top = `${document.body.scrollHeight - window.innerHeight - 10}px`
