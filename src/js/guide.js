@@ -9,15 +9,10 @@ import _item from '../templates/index-item.eft'
 import _section from '../templates/guide-section.eft'
 
 const indexList = []
-const sectionList = []
-const refs = {}
+const guides = {}
 
 const show = ({value}) => {
 	goto({value: `guide/${value}`})
-	window.requestAnimationFrame(() => {
-		// Something to do with ref
-		console.log(`Reference for '${value}'`, refs[value])
-	})
 }
 
 const items = [
@@ -99,17 +94,17 @@ for (let i of items) {
 		$methods: { show }
 	}))
 
-	const section = _section.render({$data: i})
-	refs[i.ref] = section.$element
-	sectionList.push(section)
+	guides[i.ref] = {
+		title: i.title,
+		component: _section.render({$data: i})
+	}
 }
 
 const guide = _guide.render({
 	$data: {
 		class: sharedClasses
 	},
-	indexes: indexList,
-	sections: sectionList
+	indexes: indexList
 })
 guide.$data.class = classes
 
@@ -126,4 +121,4 @@ const updateScroll = () => {
 
 window.addEventListener('scroll', updateScroll)
 
-export default guide
+export { guide, guides }

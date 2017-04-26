@@ -10,7 +10,7 @@ import mainbody from './mainbody.js'
 import header from './header.js'
 import notfound from './404.js'
 import home from './home.js'
-import guide from './guide.js'
+import { guide, guides } from './guide.js'
 import api from './api.js'
 import examples from './examples.js'
 
@@ -54,11 +54,17 @@ page('examples', () => {
 	changePage('examples')
 })
 page('guide/:ref', (ctx) => {
+	if (!(ctx.params.ref in guides)) {
+		mainbody.body = notfound
+		return
+	}
+
+	const {title, component} = guides[ctx.params.ref]
+	guide.$data.title = title
+	guide.section = component
+
 	mainbody.body = guide
 	changePage('guide')
-	window.requestAnimationFrame(() => {
-		guide.$data.ref = ctx.params.ref
-	})
 })
 page('*', () => {
 	notfound.$refs.box.classList.remove(notfoundClass.hidden)

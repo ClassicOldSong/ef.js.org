@@ -5,5 +5,5 @@
 		+indexes
 	>div.{{class.showbox}}
 		>h1.{{class.title}}
-			.Guiding {{ref}}
-		+sections
+			.{{title}}
+		-section
