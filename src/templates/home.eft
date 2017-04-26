@@ -10,9 +10,9 @@
 						>div.{{class.title}}
 							.Simple
 						>div.{{class.title}}
-							.Light
-						>div.{{class.title}}
 							.Fast
+						>div.{{class.title}}
+							.Light
 				>div.{{class.captions}}
 					>div.{{class.captionBox}}#captions
 						>div.{{class.caption}}
@@ -20,9 +20,9 @@
 						>div.{{class.caption}}
 							.No logic in template, no DOM in script.
 						>div.{{class.caption}}
-							.Only 7kb gzipped.
-						>div.{{class.caption}}
 							.Direct binding, no virtualdom, no diff, no render cycle.
+						>div.{{class.caption}}
+							.Only 7kb gzipped.
 				>div.{{class.buttons}}
 					>div.{{class.button}}
 						@click = goto:guide/quick-start
