@@ -14,4 +14,9 @@
 .main {
 	background: url('./images/bg.png');
 	overflow: hidden;
+	opacity: 0;
+	transition: opacity .5s;
+	&.show {
+		opacity: 1;
+	}
 }

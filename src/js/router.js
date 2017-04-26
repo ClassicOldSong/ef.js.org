@@ -4,6 +4,7 @@ import domReady from './utils/domready.js'
 // Import style
 import headerClass from '../styles/header.css'
 import notfoundClass from '../styles/404.css'
+import mainClass from '../styles/mainbody.css'
 // Import components
 import mainbody from './mainbody.js'
 import header from './header.js'
@@ -78,13 +79,14 @@ examples.$methods.open = open
 home.$methods = { goto, open }
 
 const init = () => {
-	document.querySelector('body').appendChild(mainbody.$element)
+	document.body.appendChild(mainbody.$element)
 	header.$refs.overlay.classList.remove(headerClass.hidden)
 }
 
 const onload = () => {
 	window.removeEventListener('load', onload)
 	header.$refs.overlay.classList.add(headerClass.hidden)
+	mainbody.$element.classList.add(mainClass.show)
 }
 
 window.addEventListener('load', onload)

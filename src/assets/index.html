@@ -7,11 +7,39 @@
 	<meta name="theme-color" content="#FFF">
 	<title>ef.js - (maybe) An elegent HTML template framework</title>
 	<link rel="shortcut icon" type="image/png" href="./favicon.png">
-	<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_a5t75u57oabutyb9.css
+	<link rel="stylesheet" type="text/css" href="https://at.alicdn.com/t/font_a5t75u57oabutyb9.css
 ">
 	<link href="https://fonts.googleapis.com/css?family=Amiri" rel="stylesheet">
-	<script src="./main.js"></script>
+	<style type="text/css">
+		.load-logo, .load-msg {
+			z-index: -1;
+			position: fixed;
+			box-sizing: border-box;
+		}
+		.load-logo {
+			top: calc(50vh - 115px);
+			left: calc(50vw - 115px);
+			height: 230px;
+			width: 230px;
+			border: 60px solid #DDD;
+			transform: rotateZ(45deg);
+		}
+		.load-msg {
+			width: 100%;top: calc(50vh - 15px);
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+			opacity: 0;
+			transition: opacity .5s;
+		}
+		.load-msg:hover {
+			opacity: 1;
+		}
+	</style>
 </head>
 <body>
+	<div class="load-logo"></div>
+	<div class="load-msg">If you keep seeing this message, please consider upgrade your browser.</div>
+	<script src="./main.js"></script>
 </body>
 </html>

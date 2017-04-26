@@ -57,18 +57,33 @@ const items = [
 		content: ''
 	},
 	{
-		title: '» Two way Binding',
-		ref: 'two',
-		content: ''
-	},
-	{
 		title: 'Advanced Usage',
 		ref: 'advanced',
 		content: 'Advanced usage here'
 	},
 	{
+		title: '» Classname handling',
+		ref: 'classname',
+		content: ''
+	},
+	{
+		title: '» Style handling',
+		ref: 'style',
+		content: ''
+	},
+	{
+		title: '» Two way Binding',
+		ref: 'two',
+		content: ''
+	},
+	{
 		title: '» Modulelize',
 		ref: 'module',
+		content: ''
+	},
+	{
+		title: 'Dig into ef',
+		ref: 'dig',
 		content: ''
 	},
 	{
