@@ -80,7 +80,7 @@ html {
 		transition: max-height .5s;
 		overflow: hidden;
 		&:hover {
-			max-height: calc(100vh - 140px);
+			max-height: 320px;
 			overflow: auto;
 		}
 	}
