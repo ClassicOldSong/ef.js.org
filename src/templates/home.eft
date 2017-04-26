@@ -22,7 +22,7 @@
 						>div.{{class.caption}}
 							.Only 7kb gzipped.
 						>div.{{class.caption}}
-							.Direct binding, no virtualdom, no diff.
+							.Direct binding, no virtualdom, no diff, no render cycle.
 				>div.{{class.buttons}}
 					>div.{{class.button}}
 						@click = goto:guide/quick-start

@@ -78,7 +78,7 @@
 		.title {
 			max-width: 500px;
 			width: calc(100vw - 36px);
-			padding-left: 62px;
+			padding: 0 62px;
 			float: left;
 		}
 	}
@@ -99,7 +99,7 @@
 		.caption {
 			max-width: 500px;
 			width: calc(100vw - 36px);
-			padding-left: 65px;
+			padding: 0 65px;
 			float: left;
 		}
 	}
@@ -167,7 +167,7 @@
 	}
 
 	.captions .captionBox .caption, .titles .titleBox .title {
-		padding-left: 5px;
+		padding: 0;
 	}
 
 	.titles {
