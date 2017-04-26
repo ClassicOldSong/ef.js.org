@@ -12,8 +12,6 @@
 }
 
 .main {
-	background-image: url('./images/bg.png');
-	background-color: #FFF;
 	overflow: hidden;
 	opacity: 0;
 	transition: opacity .5s;

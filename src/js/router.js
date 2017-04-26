@@ -6,7 +6,7 @@ import headerClass from '../styles/header.css'
 import notfoundClass from '../styles/404.css'
 import mainClass from '../styles/mainbody.css'
 // Import components
-import mainbody from './mainbody.js'
+import { mainbody, getBg } from './mainbody.js'
 import header from './header.js'
 import notfound from './404.js'
 import home from './home.js'
@@ -80,6 +80,7 @@ page.exit('*', (ctx, next) => {
 page({hashbang: true})
 
 header.$methods.goto = goto
+header.$methods.getBg = getBg
 examples.$methods.open = open
 home.$methods = { goto, open }
 

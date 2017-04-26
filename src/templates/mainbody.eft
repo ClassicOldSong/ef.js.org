@@ -1,5 +1,7 @@
 Main body of the website
 >div.{{class.main}}
+	>div.bg
+		#style = {{style}}
 	>div.{{class.container}}
 		>div.{{class.top}}
 			.ef.js

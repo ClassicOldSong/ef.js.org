@@ -1,3 +1,5 @@
+// Import utils
+import genBg from './utils/bg-gen.js'
 // Import style
 import classes from '../styles/mainbody.css'
 import shared from '../styles/shared.css'
@@ -17,4 +19,11 @@ const mainbody = _mainbody.render({
 
 mainbody.$data.class = shared
 
-export default mainbody
+const updateBg = (url) => {
+	mainbody.$data.style = `background-image: url(${url})`
+}
+const getBg = () => genBg(updateBg)
+
+getBg()
+
+export { mainbody, getBg }
