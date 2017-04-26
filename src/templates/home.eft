@@ -25,7 +25,7 @@
 							.Direct binding, no virtualdom, no diff.
 				>div.{{class.buttons}}
 					>div.{{class.button}}
-						@click = goto:guide/quickstart
+						@click = goto:guide/quick-start
 						.Quick Start
 					>div.{{class.button}}
 						@click = open:https://github.com/ClassicOldSong/ef.js

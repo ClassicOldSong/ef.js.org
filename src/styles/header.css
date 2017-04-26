@@ -44,7 +44,7 @@
 .logo {
 	height: 100%;
 	width: 100%;
-	border-width: 16px;
+	border-width: 18px;
 	border-style: solid;
 	border-image: linear-gradient(to bottom right,#ffd575,#f5ab00);
 	border-image-slice: 1;

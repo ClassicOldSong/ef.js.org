@@ -36,15 +36,14 @@ const changePage = (path) => {
 
 page('/*', (ctx) => {
 	if (ctx.path === '/') page.redirect('home')
-	else page.redirect(ctx.path.slice(1))
+	else page.redirect(ctx.path.replace(/^\/+/, ''))
 })
 page('home', () => {
 	mainbody.body = home
 	changePage('home')
 })
 page('guide', () => {
-	mainbody.body = guide
-	changePage('guide')
+	page.redirect('guide/quick-start')
 })
 page('api', () => {
 	mainbody.body = api

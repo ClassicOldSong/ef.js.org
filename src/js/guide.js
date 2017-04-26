@@ -23,7 +23,7 @@ const show = ({value}) => {
 const items = [
 	{
 		title: 'Quick Start',
-		ref: 'quickstart',
+		ref: 'quick-start',
 		content: 'Quick start guide here'
 	},
 	{
@@ -38,57 +38,57 @@ const items = [
 	},
 	{
 		title: '» Text Binding',
-		ref: 'text',
+		ref: 'text-binding',
 		content: ''
 	},
 	{
 		title: '» Attribute Binding',
-		ref: 'attr',
+		ref: 'attribute-binding',
 		content: ''
 	},
 	{
 		title: '» Property Binding',
-		ref: 'prop',
+		ref: 'property-binding',
 		content: ''
 	},
 	{
 		title: '» Event Binding',
-		ref: 'event',
+		ref: 'event-binding',
 		content: ''
 	},
 	{
 		title: 'Advanced Usage',
-		ref: 'advanced',
+		ref: 'advanced-usage',
 		content: 'Advanced usage here'
 	},
 	{
-		title: '» Classname handling',
-		ref: 'classname',
+		title: '» Classname Handling',
+		ref: 'classname-handling',
 		content: ''
 	},
 	{
-		title: '» Style handling',
-		ref: 'style',
+		title: '» Style Handling',
+		ref: 'style-handling',
 		content: ''
 	},
 	{
 		title: '» Two way Binding',
-		ref: 'two',
+		ref: 'two-way-binding',
 		content: ''
 	},
 	{
 		title: '» Modulelize',
-		ref: 'module',
+		ref: 'modulelize',
 		content: ''
 	},
 	{
 		title: 'Dig into ef',
-		ref: 'dig',
+		ref: 'dig-into-ef',
 		content: ''
 	},
 	{
 		title: '» AST Structure',
-		ref: 'ast',
+		ref: 'ast-structure',
 		content: ''
 	}
 ]
