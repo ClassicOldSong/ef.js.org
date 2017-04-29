@@ -20,7 +20,7 @@
 						>div.{{class.caption}}
 							.No logic in template, no DOM in script.
 						>div.{{class.caption}}
-							.Direct binding, no virtualdom, no diff, no render cycle.
+							.Direct binding, no virtualdom, no diff.
 						>div.{{class.caption}}
 							.Only 7kb gzipped.
 				>div.{{class.buttons}}
