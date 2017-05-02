@@ -9,7 +9,7 @@ import _mainbody from '../templates/mainbody.eft'
 import header from './header.js'
 import footer from './footer.js'
 
-const mainbody = _mainbody.render({
+const mainbody = new _mainbody({
 	$data: {
 		class: classes
 	},

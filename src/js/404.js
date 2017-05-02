@@ -4,13 +4,13 @@ import classes from '../styles/404.css'
 // Import template
 import _notfound from '../templates/404.eft'
 
-const notfound = _notfound.render({
+const notfound = new _notfound({
 	$data: {
 		class: sharedClasses
 	},
 	$methods: {
 		recover() {
-			notfound.$refs.box.classList.remove(classes.hidden)
+			notfound.$data.class.logoHidden = classes.hidden
 		}
 	}
 })

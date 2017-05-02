@@ -4,13 +4,13 @@ import shared from '../styles/shared.css'
 // Import template
 import _header from '../templates/header.eft'
 
-const header = _header.render({
+const header = new _header({
 	$data: {
 		class: classes
 	},
 	$methods: {
 		recover() {
-			header.$refs.overlay.classList.remove(classes.hidden)
+			header.$data.class.logoHidden = ''
 		}
 	}
 })

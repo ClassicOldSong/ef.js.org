@@ -5,7 +5,7 @@
 			>div.{{class.box}}
 				>div.{{class.logo}}
 			>div.{{class.box}}
-				>div.{{class.logo}}#overlay
+				>div.{{class.logo}}.{{class.logoHidden}}
 					@click = goto:home
 					@transitionend = recover
 		>div.{{class.links}}

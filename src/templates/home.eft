@@ -1,10 +1,12 @@
 >div.{{class.body}}
 	>div.{{class.block}}
-	>div.{{class.infoBox}}#box
+	>div.{{class.infoBox}}
+		#style = position: {{position = fixed}}; top: {{top = 0}}px;
 		>div.{{class.textBox}}
 			>div.{{class.contentBox}}
 				>div.{{class.titles}}
-					>div.{{class.titleBox}}#titles
+					>div.{{class.titleBox}}
+						#style = transform: translate3d({{scrollLeft = 0}}px, 0px, 0px);
 						>div.{{class.title}}
 							.Instinctive
 						>div.{{class.title}}
@@ -14,7 +16,8 @@
 						>div.{{class.title}}
 							.Light
 				>div.{{class.captions}}
-					>div.{{class.captionBox}}#captions
+					>div.{{class.captionBox}}
+						#style = transform: translate3d({{scrollLeft = 0}}px, 0px, 0px);
 						>div.{{class.caption}}
 							.Do what you believe it should do.
 						>div.{{class.caption}}
@@ -22,7 +25,7 @@
 						>div.{{class.caption}}
 							.Direct binding, no virtualdom, no diff.
 						>div.{{class.caption}}
-							.Only 7kb gzipped.
+							.Only 8kb gzipped.
 				>div.{{class.buttons}}
 					>div.{{class.button}}
 						@click = goto:guide/quick-start

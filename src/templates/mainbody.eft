@@ -1,5 +1,5 @@
 Main body of the website
->div.{{class.main}}
+>div.{{class.main}}.{{class.shown}}
 	>div.bg
 		#style = {{style}}
 	>div.{{class.container}}

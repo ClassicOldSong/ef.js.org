@@ -4,7 +4,7 @@ import classes from '../styles/api.css'
 // Import template
 import _api from '../templates/api.eft'
 
-const api = _api.render({
+const api = new _api({
 	$data: {
 		class: sharedClasses
 	}

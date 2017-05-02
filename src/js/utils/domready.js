@@ -1,3 +1,7 @@
+import {inform, exec} from 'ef.js'
+
+inform()
+
 const fns = []
 const asyncFns = []
 
@@ -18,13 +22,16 @@ const domReady = (fn, _async = false) => {
 
 const init = () => {
 	for (let i of fns) i()
+	exec()
 }
 
 const initAsync = () => {
 	document.removeEventListener('DOMContentLoaded', initAsync, false)
 	domLoaded = true
 	asyncFns.push(init)
+	inform()
 	for (let i of asyncFns) exeAsync(i)
+	exec()
 }
 
 document.addEventListener('DOMContentLoaded', initAsync, false)

@@ -90,7 +90,7 @@ const items = [
 
 for (let i of items) {
 	const { title, ref, content } = i
-	indexList.push(_item.render({
+	indexList.push(new _item({
 		$data: {
 			class: sharedClasses.item,
 			ref,
@@ -101,11 +101,11 @@ for (let i of items) {
 
 	guides[ref] = {
 		title,
-		component: _section.render({$data: {content}})
+		component: new _section({$data: {content}})
 	}
 }
 
-const guide = _guide.render({
+const guide = new _guide({
 	$data: {
 		class: sharedClasses
 	},

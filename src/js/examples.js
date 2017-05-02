@@ -17,7 +17,7 @@ const info = {
 		}
 	},
 	dbmon: {
-		src: 'https://classicoldsong.github.io/js-repaint-perfs/ef/index.html',
+		src: 'https://classicoldsong.github.io/js-repaint-perfs/ef/opt.html',
 		repo: 'https://github.com/ClassicOldSong/js-repaint-perfs',
 		class: {
 			todo: sharedClasses.item,
@@ -40,7 +40,7 @@ const show = ({state, value}) => {
 	state.$data = info[value]
 }
 
-const examples = _examples.render({
+const examples = new _examples({
 	$data: {
 		class: sharedClasses
 	},
