@@ -28,8 +28,8 @@ const goto = ({value}) => {
 
 const open = ({value}) => window.open(value)
 
-const changePage = (path) => {
-	if (path) header.$data.class[path] = classSelected
+const changePage = (_path) => {
+	if (_path) header.$data.class[_path] = classSelected
 
 	header.$data.class.logoHidden = ''
 	window.requestAnimationFrame(() => {
