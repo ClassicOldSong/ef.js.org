@@ -28,7 +28,7 @@
 							.Only 8kb gzipped.
 				>div.{{class.buttons}}
 					>div.{{class.button}}
-						@click = goto:guide/quick-start
+						@click = goto:guides/quick-start
 						.Quick Start
 					>div.{{class.button}}
 						@click = open:https://github.com/ClassicOldSong/ef.js

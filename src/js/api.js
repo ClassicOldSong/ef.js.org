@@ -4,12 +4,16 @@ import classes from '../styles/api.css'
 // Import template
 import _api from '../templates/api.eft'
 
-const api = new _api({
-	$data: {
-		class: sharedClasses
-	}
-})
+const getApi = () => {
+	const api = new _api({
+		$data: {
+			class: sharedClasses
+		}
+	})
 
-api.$data.class = classes
+	api.$data.class = classes
 
-export default api
+	return api
+}
+
+export default getApi

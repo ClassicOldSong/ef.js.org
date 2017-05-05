@@ -9,15 +9,17 @@ import mainClass from '../styles/mainbody.css'
 // Import components
 import { mainbody, getBg } from './mainbody.js'
 import header from './header.js'
-import notfound from './404.js'
-import { home, updateScroll as updateScrollHome } from './home.js'
-import { guide, guides } from './guide.js'
-import api from './api.js'
-import examples from './examples.js'
+import getNotfound from './404.js'
+import getHome from './home.js'
+import { getGuide, guides } from './guide.js'
+import getApi from './api.js'
+import getExamples from './examples.js'
 
 window.mainbody = mainbody
 
-console.log(mainbody)
+// console.log(mainbody)
+
+const cache = {}
 
 const classSelected = `${headerClass.link} ${headerClass.selected}`
 
@@ -43,52 +45,83 @@ page('/*', (ctx) => {
 })
 page('home', () => {
 	inform()
+	if (!cache.home) {
+		const {home, updateScroll} = getHome()
+		cache.home = {home, updateScroll}
+		home.$methods = { goto, open }
+	}
+	const {home, updateScroll} = cache.home
 	mainbody.body = home
-	window.addEventListener('scroll', updateScrollHome)
-	updateScrollHome()
+	window.addEventListener('scroll', updateScroll)
+	updateScroll()
 	changePage('home')
 	exec()
 })
 page.exit('home', (ctx, next) => {
-	window.removeEventListener('scroll', updateScrollHome)
+	window.removeEventListener('scroll', cache.home.updateScroll)
 	next()
 })
-page('guide', () => {
-	page.redirect('guide/quick-start')
+page('guides', () => {
+	page.redirect('guides/quick-start')
 })
 page('api', () => {
 	inform()
-	mainbody.body = api
+	if (!cache.api) cache.api = getApi()
+	mainbody.body = cache.api
 	changePage('api')
 	exec()
 })
 page('examples', () => {
 	inform()
-	mainbody.body = examples
+	if (!cache.examples) {
+		const {examples, updateScroll} = getExamples()
+		cache.examples = {examples, updateScroll}
+		examples.$methods.open = open
+	}
+	window.addEventListener('scroll', cache.examples.updateScroll)
+	mainbody.body = cache.examples.examples
+	cache.examples.updateScroll()
 	changePage('examples')
 	exec()
 })
-page('guide/:ref', (ctx) => {
+page.exit('examples', (ctx, next) => {
+	window.removeEventListener('scroll', cache.examples.updateScroll)
+	next()
+})
+page('guides/:ref', (ctx) => {
 	inform()
 	if (!(ctx.params.ref in guides)) {
-		mainbody.body = notfound
+		if (!cache.notfound) cache.notfound = getNotfound()
+		mainbody.body = cache.notfound
 		return exec()
 	}
 
 	const {title, component} = guides[ctx.params.ref]
-	guide.$data.title = title
-	guide.section = component
+	if (!cache.guide) {
+		const {guide, updateScroll} = getGuide()
+		cache.guide = {guide, updateScroll}
+	}
+	window.addEventListener('scroll', cache.guide.updateScroll)
+	cache.guide.guide.$data.title = title
+	cache.guide.guide.section = component
 
-	mainbody.body = guide
-	changePage('guide')
+	cache.guide.updateScroll()
+
+	mainbody.body = cache.guide.guide
+	changePage('guides')
 	exec()
+})
+page.exit('guides/*', (ctx, next) => {
+	window.removeEventListener('scroll', cache.guide.updateScroll)
+	next()
 })
 page('*', () => {
 	inform()
-	mainbody.body = notfound
-	notfound.$data.class.logoHidden = ''
+	if (!cache.notfound) cache.notfound = getNotfound()
+	mainbody.body = cache.notfound
+	cache.notfound.$data.class.logoHidden = ''
 	window.requestAnimationFrame(() => {
-		notfound.$data.class.logoHidden = notfoundClass.hidden
+		cache.notfound.$data.class.logoHidden = notfoundClass.hidden
 	})
 	changePage()
 	exec()
@@ -102,11 +135,9 @@ page({hashbang: true})
 
 header.$methods.goto = goto
 header.$methods.getBg = getBg
-examples.$methods.open = open
-home.$methods = { goto, open }
 
 const init = () => {
-	mainbody.$mount(document.body)
+	mainbody.$mount({target: document.body})
 	header.$data.class.logoHidden = ''
 }
 

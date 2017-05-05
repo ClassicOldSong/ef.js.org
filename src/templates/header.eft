@@ -17,7 +17,7 @@
 					@click = goto:api
 					.API
 				>div.{{class.guide}}
-					@click = goto:guide
+					@click = goto:guides
 					.GUIDE
 				>div.{{class.home}}
 					@click = goto:home

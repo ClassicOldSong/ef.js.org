@@ -40,27 +40,30 @@ const show = ({state, value}) => {
 	state.$data = info[value]
 }
 
-const examples = new _examples({
-	$data: {
-		class: sharedClasses
-	},
-	$methods: { show }
-})
+const getExamples = () => {
+	const examples = new _examples({
+		$data: {
+			class: sharedClasses
+		},
+		$methods: { show }
+	})
 
-examples.$data.class = classes
-show({state: examples, value: 'todo'})
+	examples.$data.class = classes
+	show({state: examples, value: 'todo'})
 
-const updateScroll = () => {
-	const height = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
-	if (document.body.scrollHeight - window.innerHeight - height < 150 && window.innerWidth > 640) {
-		examples.$refs.index.style.position = 'absolute'
-		examples.$refs.index.style.top = `${document.body.scrollHeight - window.innerHeight - 10}px`
-	} else {
-		examples.$refs.index.style.position = 'fixed'
-		examples.$refs.index.style.top = 'initial'
+	const updateScroll = () => {
+		const height = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
+		const position = document.body.scrollHeight - window.innerHeight - height
+		if (position > 0 && position < 150 && window.innerWidth > 640) {
+			examples.$refs.index.style.position = 'absolute'
+			examples.$refs.index.style.top = `${document.body.scrollHeight - window.innerHeight - 10}px`
+		} else {
+			examples.$refs.index.style.position = 'fixed'
+			examples.$refs.index.style.top = 'initial'
+		}
 	}
+
+	return {examples, updateScroll}
 }
 
-window.addEventListener('scroll', updateScroll)
-
-export default examples
+export default getExamples

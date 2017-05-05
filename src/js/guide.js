@@ -10,9 +10,10 @@ import _section from '../templates/guide-section.eft'
 
 const indexList = []
 const guides = {}
+const cache = {}
 
 const show = ({value}) => {
-	goto({value: `guide/${value}`})
+	goto({value: `guides/${value}`})
 }
 
 const items = [
@@ -99,31 +100,38 @@ for (let i of items) {
 		$methods: { show }
 	}))
 
-	guides[ref] = {
-		title,
-		component: new _section({$data: {content}})
-	}
+	Object.defineProperty(guides, ref, {
+		get() {
+			return {
+				title,
+				component: cache[ref] || (cache[ref] = new _section({$data: {content}}))
+			}
+		}
+	})
 }
 
-const guide = new _guide({
-	$data: {
-		class: sharedClasses
-	},
-	indexes: indexList
-})
-guide.$data.class = classes
+const getGuide = () => {
+	const guide = new _guide({
+		$data: {
+			class: sharedClasses
+		},
+		indexes: indexList
+	})
+	guide.$data.class = classes
 
-const updateScroll = () => {
-	const height = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
-	if (document.body.scrollHeight - window.innerHeight - height < 150 && window.innerWidth > 640) {
-		guide.$refs.index.style.position = 'absolute'
-		guide.$refs.index.style.top = `${document.body.scrollHeight - window.innerHeight - 10}px`
-	} else {
-		guide.$refs.index.style.position = 'fixed'
-		guide.$refs.index.style.top = 'initial'
+	const updateScroll = () => {
+		const height = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
+		const position = document.body.scrollHeight - window.innerHeight - height
+		if (position > 0 && position < 150 && window.innerWidth > 640) {
+			guide.$refs.index.style.position = 'absolute'
+			guide.$refs.index.style.top = `${document.body.scrollHeight - window.innerHeight - 10}px`
+		} else {
+			guide.$refs.index.style.position = 'fixed'
+			guide.$refs.index.style.top = 'initial'
+		}
 	}
+
+	return { guide, updateScroll }
 }
 
-window.addEventListener('scroll', updateScroll)
-
-export { guide, guides }
+export { getGuide, guides }
