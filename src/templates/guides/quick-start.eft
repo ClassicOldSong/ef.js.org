@@ -1,0 +1,7 @@
+>div.{{class.content}}
+	>h3
+		.Using EFML
+	>iframe
+		#src = https://jsfiddle.net/ClassicOldSong/mpnuwgqx/embedded
+		#allowfullscreen = allowfullscreen
+		#frameborder = 0
