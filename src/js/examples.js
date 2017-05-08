@@ -54,7 +54,7 @@ const getExamples = () => {
 	const updateScroll = () => {
 		const height = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
 		const position = document.body.scrollHeight - window.innerHeight - height
-		if (position > 0 && position < 150 && window.innerWidth > 640) {
+		if (height > 0 && position > -height && position < 150 && window.innerWidth > 640) {
 			examples.$refs.index.style.position = 'absolute'
 			examples.$refs.index.style.top = `${document.body.scrollHeight - window.innerHeight - 10}px`
 		} else {

@@ -10,15 +10,15 @@
 					@transitionend = recover
 		>div.{{class.links}}
 			>div.{{class.wrapper}}
-				>div.{{class.examples}}
+				>div.{{class.link}}.{{class.examples}}
 					@click = goto:examples
 					.EXAMPLES
-				>div.{{class.api}}
+				>div.{{class.link}}.{{class.api}}
 					@click = goto:api
 					.API
-				>div.{{class.guide}}
+				>div.{{class.link}}.{{class.guides}}
 					@click = goto:guides
 					.GUIDE
-				>div.{{class.home}}
+				>div.{{class.link}}.{{class.home}}
 					@click = goto:home
 					.HOME

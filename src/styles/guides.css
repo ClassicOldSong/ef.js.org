@@ -1,0 +1,12 @@
+.content {
+	h2 {
+		border-bottom: 1px solid #CCC;
+		padding-bottom: 5px;
+		display: list-item;
+		list-style-type: decimal;
+	}
+
+	p {
+		margin: 10px 0;
+	}
+}

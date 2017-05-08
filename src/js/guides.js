@@ -1,14 +1,15 @@
 import classes from '../styles/guides.css'
-import _quickStart from '../templates/guides/quick-start.js'
-import _EFML from '../templates/guides/efml.js'
+import _quickStart from '../templates/guides/quick-start.eft'
+import _EFML from '../templates/guides/efml.eft'
 
 const applyStyle = (state) => {
 	state.$data.class = classes
+	return state
 }
 
-const guides = {
+const _guides = {
 	_quickStart,
 	_EFML
 }
 
-export {applyStyle, guides}
+export { applyStyle, _guides }

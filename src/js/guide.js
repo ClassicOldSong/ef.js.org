@@ -6,7 +6,7 @@ import classes from '../styles/guide.css'
 // Import template
 import _guide from '../templates/guide.eft'
 import _item from '../templates/index-item.eft'
-import _section from '../templates/guide-section.eft'
+import { applyStyle, _guides } from './guides.js'
 
 const indexList = []
 const guides = {}
@@ -20,73 +20,73 @@ const items = [
 	{
 		title: 'Quick Start',
 		ref: 'quick-start',
-		content: 'Quick start guide here'
+		content: _guides._quickStart
 	},
 	{
 		title: 'EFML',
 		ref: 'efml',
-		content: 'EFML start guide here'
+		content: _guides._EFML
 	},
-	{
-		title: '» Tags',
-		ref: 'tags',
-		content: ''
-	},
-	{
-		title: '» Text Binding',
-		ref: 'text-binding',
-		content: ''
-	},
-	{
-		title: '» Attribute Binding',
-		ref: 'attribute-binding',
-		content: ''
-	},
-	{
-		title: '» Property Binding',
-		ref: 'property-binding',
-		content: ''
-	},
-	{
-		title: '» Event Binding',
-		ref: 'event-binding',
-		content: ''
-	},
-	{
-		title: 'Advanced Usage',
-		ref: 'advanced-usage',
-		content: 'Advanced usage here'
-	},
-	{
-		title: '» Classname Handling',
-		ref: 'classname-handling',
-		content: ''
-	},
-	{
-		title: '» Style Handling',
-		ref: 'style-handling',
-		content: ''
-	},
-	{
-		title: '» Two way Binding',
-		ref: 'two-way-binding',
-		content: ''
-	},
-	{
-		title: '» Modulelize',
-		ref: 'modulelize',
-		content: ''
-	},
-	{
-		title: 'Dig into ef',
-		ref: 'dig-into-ef',
-		content: ''
-	},
-	{
-		title: '» AST Structure',
-		ref: 'ast-structure',
-		content: ''
-	}
+	// {
+	// 	title: '» Tags',
+	// 	ref: 'tags',
+	// 	content: ''
+	// },
+	// {
+	// 	title: '» Text Binding',
+	// 	ref: 'text-binding',
+	// 	content: ''
+	// },
+	// {
+	// 	title: '» Attribute Binding',
+	// 	ref: 'attribute-binding',
+	// 	content: ''
+	// },
+	// {
+	// 	title: '» Property Binding',
+	// 	ref: 'property-binding',
+	// 	content: ''
+	// },
+	// {
+	// 	title: '» Event Binding',
+	// 	ref: 'event-binding',
+	// 	content: ''
+	// },
+	// {
+	// 	title: 'Advanced Usage',
+	// 	ref: 'advanced-usage',
+	// 	content: 'Advanced usage here'
+	// },
+	// {
+	// 	title: '» Classname Handling',
+	// 	ref: 'classname-handling',
+	// 	content: ''
+	// },
+	// {
+	// 	title: '» Style Handling',
+	// 	ref: 'style-handling',
+	// 	content: ''
+	// },
+	// {
+	// 	title: '» Two way Binding',
+	// 	ref: 'two-way-binding',
+	// 	content: ''
+	// },
+	// {
+	// 	title: '» Modulelize',
+	// 	ref: 'modulelize',
+	// 	content: ''
+	// },
+	// {
+	// 	title: 'Dig into ef',
+	// 	ref: 'dig-into-ef',
+	// 	content: ''
+	// },
+	// {
+	// 	title: '» AST Structure',
+	// 	ref: 'ast-structure',
+	// 	content: ''
+	// }
 ]
 
 for (let i of items) {
@@ -104,7 +104,7 @@ for (let i of items) {
 		get() {
 			return {
 				title,
-				component: cache[ref] || (cache[ref] = new _section({$data: {content}}))
+				component: cache[ref] || (cache[ref] = applyStyle(new content()))
 			}
 		}
 	})
@@ -122,7 +122,7 @@ const getGuide = () => {
 	const updateScroll = () => {
 		const height = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
 		const position = document.body.scrollHeight - window.innerHeight - height
-		if (position > 0 && position < 150 && window.innerWidth > 640) {
+		if (height > 0 && position > -height && position < 150 && window.innerWidth > 640) {
 			guide.$refs.index.style.position = 'absolute'
 			guide.$refs.index.style.top = `${document.body.scrollHeight - window.innerHeight - 10}px`
 		} else {

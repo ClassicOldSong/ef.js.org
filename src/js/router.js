@@ -21,8 +21,6 @@ window.mainbody = mainbody
 
 const cache = {}
 
-const classSelected = `${headerClass.link} ${headerClass.selected}`
-
 const goto = ({value}) => {
 	window.scrollTo(0, 0)
 	page(value)
@@ -31,7 +29,7 @@ const goto = ({value}) => {
 const open = ({value}) => window.open(value)
 
 const changePage = (_path) => {
-	if (_path) header.$data.class[_path] = classSelected
+	if (_path) header.$data.class[_path] = headerClass.selected
 
 	header.$data.class.logoHidden = ''
 	window.requestAnimationFrame(() => {
@@ -127,7 +125,7 @@ page('*', () => {
 	exec()
 })
 page.exit('*', (ctx, next) => {
-	header.$data.class[ctx.path.split('/')[0]] = headerClass.link
+	header.$data.class[ctx.path.split('/')[0]] = ''
 	next()
 })
 

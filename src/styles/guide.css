@@ -1,7 +1,8 @@
-.title, section {
+.title {
 	padding: 0 10px;
 }
 
 section {
+	padding: 0 10px 0 42px;
 	margin-top: 20px;
 }
