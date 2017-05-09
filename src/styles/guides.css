@@ -9,4 +9,18 @@
 	p {
 		margin: 10px 0;
 	}
+
+	a {
+		text-decoration: none;
+		color: #FFB200;
+		font-weight: bold;
+		&:hover {
+			text-decoration: underline;
+		};
+	}
+
+	img {
+		width: 100%;
+		margin: 10px 0;
+	}
 }

@@ -9,3 +9,16 @@
 		.What is EFML
 	>p
 		.EFML is a template language specially designed for ef.js. As a replacement for XML-like language, EFML is more convenient to write with, and also provides some extra functionality such as data binding and events handling.
+		>br
+		.Basic syntax is shown as below:
+		>br
+		>img
+			#src = https://ooo.0o0.ooo/2017/05/09/59117bfea7c60.png
+		>br
+		.Now you are ready to go! Go to the &
+		>a
+			#href = https://jsfiddle.net/ClassicOldSong/oa3096s3
+			#rel = noopener
+			#target = _blank
+			.Hello World
+		. demo and try to play around with EFML!
