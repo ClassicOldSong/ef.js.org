@@ -9,8 +9,8 @@ const header = new _header({
 		class: classes
 	},
 	$methods: {
-		recover() {
-			header.$data.class.logoHidden = ''
+		recover({state}) {
+			state.$data.class.logoHidden = ''
 		}
 	}
 })

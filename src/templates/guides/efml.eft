@@ -1,3 +1,7 @@
 >section.{{class.content}}
 	>h2
 		.Syntax
+	>h2
+		.Parser
+	>h2
+		.Highlighters
