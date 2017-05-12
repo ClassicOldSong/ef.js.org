@@ -36,6 +36,19 @@
 				>code
 					.>div.some.class.names#referenced
 				..
+			>li
+				>code
+					.#
+				. stands for the attribute for the tag. For example, &
+				>code
+					.#style = background-color: #CCC;
+				. after a &
+				>code
+					.>div
+				. tag will be rendered as &
+				>code
+					.<div style="background-color: #CCC;"></div>
+				..
 	>h2
 		.Parser
 	>h2
