@@ -1,6 +1,41 @@
 >section.{{class.content}}
 	>h2
 		.Syntax
+	>p
+		>ul
+			>li
+				>code
+					.>
+				. stands for tag names. For example, &
+				>code
+					.>div
+				. will be rendered as &
+				>code
+					.<div></div>
+				..
+			>li
+				>code
+					..
+				. after &
+				>code
+					.>
+				. stands for class names for this tag. For example, &
+				>code
+					.>div.some.class.names
+				. will be rendered as &
+				>code
+					.<div class="some class names"></div>
+				..
+			>li
+				>code
+					.#
+				. at the end of tag definition stands for the reference name of the element. For example, you can get the original referenced element inside your code like this &
+				>code
+					.state.$refs.referenced
+				. with the following template &
+				>code
+					.>div.some.class.names#referenced
+				..
 	>h2
 		.Parser
 	>h2
