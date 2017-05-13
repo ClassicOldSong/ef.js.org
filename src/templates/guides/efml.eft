@@ -53,3 +53,40 @@
 		.Parser
 	>h2
 		.Highlighters
+	>p
+		>ul
+			>li
+				>a
+					#href = https://github.com/ClassicOldSong/SublimeEFMLHighlighter
+					#rel = noopener
+					#target = _blank
+					.SublimeEFMLHighlighter
+				. - EFML syntax highlighter for SublimeText3
+			>li
+				>a
+					#href = https://marketplace.visualstudio.com/items?itemName=ClassicOldSong.efml
+					#rel = noopener
+					#target = _blank
+					.VSCodeEFMLHighlighter
+				. - EFML syntax highlighter for VSCode
+			>li
+				>a
+					#href = https://atom.io/packages/efml
+					#rel = noopener
+					#target = _blank
+					.AtomEFMLHighlighter
+				. - EFML syntax highlighter for Atom
+			>li
+				>a
+					#href = https://github.com/ClassicOldSong/PrismEFMLSyntax
+					#rel = noopener
+					#target = _blank
+					.PrismEFMLSyntax
+				. - EFML syntax for Prism
+			>li
+				>a
+					#href = https://github.com/deluxghost/EFML.vim
+					#rel = noopener
+					#target = _blank
+					.EFML.vim
+				. by deluxghost - EFML (*.ef, *.eft) syntax highlighting for Vim
