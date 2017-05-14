@@ -1,5 +1,6 @@
 >div.{{class.body}}
-	>ul.{{class.list}}#index
+	>ul.{{class.list}}
+		#style = position: {{position = fixed}}; top: {{top = initial}};
 		>li.{{class.expand}}
 			.» Index
 		+indexes

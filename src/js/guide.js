@@ -1,3 +1,4 @@
+import { inform, exec } from 'ef.js'
 // Import utils
 import { goto } from './router.js'
 // Import style
@@ -122,13 +123,15 @@ const getGuide = () => {
 	const updateScroll = () => {
 		const height = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
 		const position = document.body.scrollHeight - window.innerHeight - height
+		inform()
 		if (height > 0 && position > -height && position < 150 && window.innerWidth > 640) {
-			guide.$refs.index.style.position = 'absolute'
-			guide.$refs.index.style.top = `${document.body.scrollHeight - window.innerHeight - 10}px`
+			guide.$data.position = 'absolute'
+			guide.$data.top = `${document.body.scrollHeight - window.innerHeight - 10}px`
 		} else {
-			guide.$refs.index.style.position = 'fixed'
-			guide.$refs.index.style.top = 'initial'
+			guide.$data.position = 'fixed'
+			guide.$data.top = 'initial'
 		}
+		exec()
 	}
 
 	return { guide, updateScroll }

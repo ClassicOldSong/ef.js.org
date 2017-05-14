@@ -1,3 +1,4 @@
+import { inform, exec } from 'ef.js'
 // Import style
 import sharedClasses from '../styles/shared.css'
 import classes from '../styles/examples.css'
@@ -54,13 +55,15 @@ const getExamples = () => {
 	const updateScroll = () => {
 		const height = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
 		const position = document.body.scrollHeight - window.innerHeight - height
+		inform()
 		if (height > 0 && position > -height && position < 150 && window.innerWidth > 640) {
-			examples.$refs.index.style.position = 'absolute'
-			examples.$refs.index.style.top = `${document.body.scrollHeight - window.innerHeight - 10}px`
+			examples.$data.position = 'absolute'
+			examples.$data.top = `${document.body.scrollHeight - window.innerHeight - 10}px`
 		} else {
-			examples.$refs.index.style.position = 'fixed'
-			examples.$refs.index.style.top = 'initial'
+			examples.$data.position = 'fixed'
+			examples.$data.top = 'initial'
 		}
+		exec()
 	}
 
 	return {examples, updateScroll}
