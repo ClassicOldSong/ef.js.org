@@ -39,7 +39,7 @@
 			>li
 				>code
 					.#
-				. stands for the attribute for the tag. For example, &
+				. stands for the attribute of the tag. For example, &
 				>code
 					.#style = background-color: #CCC;
 				. after a &
@@ -49,10 +49,28 @@
 				>code
 					.<div style="background-color: #CCC;"></div>
 				..
+			>li
+				>code
+					.%
+				. stands for the property of the tag. For example, when you have &
+				>code
+					.%someProperty = something
+				. after a &
+				>code
+					.>div#testdiv
+				. tag, you will find that the value of &
+				>code
+					.state.$refs.testdiv.someProperty
+				. has already been set to &
+				>code
+					.something
+				..
 	>h2
 		.Parser
 	>h2
 		.Highlighters
+	>p
+		.A bunch of code highlighters for EFML have already been released. See blow:
 	>p
 		>ul
 			>li
