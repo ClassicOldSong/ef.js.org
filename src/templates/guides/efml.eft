@@ -65,6 +65,22 @@
 				>code
 					.something
 				..
+			>li
+				>code
+					.@
+				. stands for the event for the element. For example, write &
+				>code
+					.@click = clickHandler
+				.after a &
+				>code
+					.>div
+				. tag will create a click handler called &
+				>code
+					.clickHandler
+				. at &
+				>code
+					.state.$methods
+				.. What you need to do is put a handler function to the right place.
 	>h2
 		.Parser
 	>h2
