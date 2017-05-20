@@ -68,7 +68,7 @@
 			>li
 				>code
 					.@
-				. stands for the event for the element. For example, write &
+				. stands for the event of the element. For example, write &
 				>code
 					.@click = clickHandler
 				.after a &
@@ -80,9 +80,35 @@
 				. at &
 				>code
 					.state.$methods
-				.. What you need to do is put a handler function to the right place.
+				.. What you only need to do is put a handler function to the right place, ef does all the other thing for you.
+			>li
+				>code
+					..
+				. stands fot the text content of the element. For example, write &
+				>code
+					..some text
+				. after a &
+				>code
+					.>div
+				. tag will be rendered as &
+				>code
+					.<div>some text</div>
+				..
 	>h2
 		.Parser
+	>p
+		.Currently there is only one official parser for EFML: &
+		>a
+			#href = https://github.com/ClassicOldSong/eft-parser
+			#rel = noopener
+			#target = _blank
+			.eft-parser
+	>p
+		.The parser converts the EFML template to AST that ef uses. See &
+		>a
+			#href = guides/deep-into-ef
+			.Deep Into ef
+		. section for more information about the AST format.
 	>h2
 		.Highlighters
 	>p
