@@ -28,6 +28,11 @@ const items = [
 		ref: 'efml',
 		content: _guides._EFML
 	},
+	{
+		title: 'Basic Binding',
+		ref: 'basic-binding',
+		content: _guides._basicBinding
+	}
 	// {
 	// 	title: '» Tags',
 	// 	ref: 'tags',
