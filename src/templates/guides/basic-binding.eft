@@ -4,3 +4,16 @@
 	>script
 		#src = //jsfiddle.net/ClassicOldSong/30foa4fp/embed/js,result/
 		#async
+	>h2
+		.Usage
+	>p
+		.Contents inside mustaches are considered as binded value. String before &
+		>code
+			.=
+		. is considered as the path of the value, splitted by dot. String after &
+		>code
+			.=
+		. is considered as the default value, whose type is always &
+		>code
+			.string
+		..

@@ -94,6 +94,13 @@
 				>code
 					.<div>some text</div>
 				..
+			>br
+			>b
+				.Note:
+			. Escape character of EFML is &
+			>code
+				.&&
+			., in case of the conflict with js's escape sequence.
 	>h2
 		.Parser
 	>p
