@@ -7,7 +7,7 @@
 	>h2
 		.Usage
 	>p
-		.Contents inside mustaches are considered as binded value. String before &
+		.Contents inside double curly braces we called "mustaches" are considered as binded value. String before &
 		>code
 			.=
 		. is considered as the path of the value, splitted by dot. String after &
@@ -17,3 +17,5 @@
 		>code
 			.string
 		..
+	>p
+		.Mustaches can be used inside class definitions, property values, attribute values, event passing values and texts. Multiple binding mustaches can be precent in one value, which ef will handle the stitching for you.
