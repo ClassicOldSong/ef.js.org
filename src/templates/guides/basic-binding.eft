@@ -2,7 +2,7 @@
 	>h2
 		.Example
 	>script
-		#src = //jsfiddle.net/ClassicOldSong/30foa4fp/embed/js,result/
+		#src = //jsfiddle.net/ClassicOldSong/30foa4fp/embed/result,js/
 		#async
 	>h2
 		.Usage

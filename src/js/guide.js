@@ -32,6 +32,11 @@ const items = [
 		title: 'Basic Binding',
 		ref: 'basic-binding',
 		content: _guides._basicBinding
+	},
+	{
+		title: 'Two-way Binding',
+		ref: 'tow-way-binding',
+		content: _guides._twoWayBinding
 	}
 	// {
 	// 	title: '» Tags',

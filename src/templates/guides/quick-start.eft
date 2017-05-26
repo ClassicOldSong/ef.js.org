@@ -4,7 +4,7 @@
 	>p
 		>script
 			#async
-			#src = //jsfiddle.net/ClassicOldSong/oa3096s3/embed/js,result/
+			#src = //jsfiddle.net/ClassicOldSong/oa3096s3/embed/result,js/
 	>h2
 		.What is EFML
 	>p
