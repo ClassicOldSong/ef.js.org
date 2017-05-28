@@ -13,4 +13,7 @@
 		. or &
 		>code
 			.%change
-		. property set and has only one mustach as value will be binded tow-way automatically. Stitched value can only be binded one-way.
+		. property set and has only one mustach as value will be binded tow-way automatically. Stitched value can only be binded one-way. Here is another example with particle update showing the behavior of stitched value:
+	>script
+		#src = //jsfiddle.net/ClassicOldSong/pyovg8ce/embed/result,js/
+		#async
