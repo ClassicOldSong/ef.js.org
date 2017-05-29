@@ -35,7 +35,7 @@ const items = [
 	},
 	{
 		title: 'Two-way Binding',
-		ref: 'tow-way-binding',
+		ref: 'two-way-binding',
 		content: _guides._twoWayBinding
 	}
 	// {
