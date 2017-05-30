@@ -37,6 +37,11 @@ const items = [
 		title: 'Two-way Binding',
 		ref: 'two-way-binding',
 		content: _guides._twoWayBinding
+	},
+	{
+		title: 'Events handling',
+		ref: 'events-handling',
+		content: _guides._eventsHandling
 	}
 	// {
 	// 	title: '» Tags',
