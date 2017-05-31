@@ -2,18 +2,12 @@
 	>h2
 		.Example
 	>script
-		#src = //jsfiddle.net/ClassicOldSong/dbow6029/embed/result,js/
+		#src = //jsfiddle.net/ClassicOldSong/t30mbck9/embed/result,js/
 		#async
 	>h2
 		.Usage
 	>p
-		.tags with &
+		.Bind events using
 		>code
-			.%value
-		. or &
-		>code
-			.%change
-		. property set and has only one mustach as value will be binded tow-way automatically. Stitched value can only be binded one-way. Here is another example with particle update showing the behavior of stitched value:
-	>script
-		#src = //jsfiddle.net/ClassicOldSong/pyovg8ce/embed/result,js/
-		#async
+			.@event = handler:{&{value}&} to be passed
+		..
