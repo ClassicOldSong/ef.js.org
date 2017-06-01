@@ -7,7 +7,10 @@
 	>h2
 		.Usage
 	>p
-		.Bind events using
+		.Bind events using &
 		>code
-			.@event = handler:{&{value}&} to be passed
-		..
+			.@[event type] = [handler name]:[value to be passed]
+		.. Note that mustaches are supported in values. Here is a demostration about value handling: &
+	>script
+		#src = //jsfiddle.net/ClassicOldSong/qk1v15rj/embed/result,js/
+		#async
