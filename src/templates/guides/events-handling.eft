@@ -9,8 +9,13 @@
 	>p
 		.Bind events using &
 		>code
-			.@[event type] = [handler name]:[value to be passed]
+			.@[event type].[key code 1].[key code 2].[modify key 1].[modify key 2].[capture].[stop:stopPropagation].[stopImmediate:stopImmediatePropagation].[prevent:preventDefault] = [handler name]:[value to be passed]
 		.. Note that mustaches are supported in values. Here is a demostration about value handling: &
 	>script
 		#src = //jsfiddle.net/ClassicOldSong/qk1v15rj/embed/result,js/
+		#async
+	>p
+		.Below is an example about how key handlers work. Note that wrong modify keys pressed will block the handler from responding.
+	>script
+		#src = //jsfiddle.net/ClassicOldSong/nqncusqh/embed/result,js/
 		#async
