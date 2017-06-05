@@ -17,6 +17,29 @@
 		>pre
 			.import { create, t, inform, exec, bundle, setParser, parseEft, version } from 'ef.js'&nconst { create, t, inform, exec, bundle, setParser, parseEft, version } = require('ef.js')
 	>h2
+		.Creating a template
+	>p
+		.There are two ways of creating a template. One is from template string, another is from the AST. In most situation you do not need to write an AST by hand, so we are only talking about the template string by the time.
+	>p
+		.First of all, you should get the creation function from ef. In browser, it should be &
+		>code
+			.const { create, t } = ef
+		., with CommonJS loader, it should be &
+		>code
+			.const { create, t } = require('ef.js')
+		., or with ES6 module, it should be &
+		>code
+			.import { create, t } from 'ef.js'
+		.. &
+		>code
+			.create
+		. is for both template strings and ASTs, while &
+		>code
+			.t
+		. only accepts JavaScript template string.
+	>pre
+		%innerHTML = {{code1}}
+	>h2
 		.What is EFML
 	>p
 		.EFML is a completely logic free template language specially designed for ef.js. As a replacement for XML-like language, EFML flattens the 3D structure of XML to completely 2D, and also provides some extra functionality such as data binding and events handling as addition.
