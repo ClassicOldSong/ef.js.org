@@ -11,6 +11,7 @@ const progress = require('rollup-plugin-progress')
 const json = require('rollup-plugin-json')
 const eft = require('rollup-plugin-eft')
 const postcss = require('rollup-plugin-postcss')
+const string = require('rollup-plugin-string')
 
 // Postcss plugins
 const postcssModules = require('postcss-modules')
@@ -51,7 +52,9 @@ module.exports = {
 		progress({
 			clearLine: false
 		}),
-		eslint(),
+		eslint({
+			exclude: ['**/*.efml', '**/*.tjs']
+		}),
 		resolve({
 			jsnext: true,
 			main: true,
@@ -59,6 +62,9 @@ module.exports = {
 		}),
 		commonjs(),
 		json(),
+		string({
+			include: ['**/*.efml', '**/*.tjs']
+		}),
 		eft(),
 		postcss({
 			plugins: [

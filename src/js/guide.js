@@ -1,6 +1,8 @@
 import { inform, exec } from 'ef.js'
+import Prism from 'prismjs'
 // Import utils
 import { goto } from './router.js'
+import efmlSyntax from './utils/prism-efml.js'
 // Import style
 import sharedClasses from '../styles/shared.css'
 import classes from '../styles/guide.css'
@@ -8,6 +10,8 @@ import classes from '../styles/guide.css'
 import _guide from '../templates/guide.eft'
 import _item from '../templates/index-item.eft'
 import { applyStyle, _guides } from './guides.js'
+// Import codes
+import code2 from '../templates/guides/codes/code2.efml'
 
 const indexList = []
 const guides = {}
@@ -21,7 +25,12 @@ const items = [
 	{
 		title: 'Quick Start',
 		ref: 'quick-start',
-		content: _guides._quickStart
+		content: _guides._quickStart,
+		state: {
+			$data: {
+				code2: Prism.highlight(code2, efmlSyntax)
+			}
+		}
 	},
 	{
 		title: 'EFML',
@@ -106,7 +115,7 @@ const items = [
 ]
 
 for (let i of items) {
-	const { title, ref, content } = i
+	const { title, ref, content, state } = i
 	indexList.push(new _item({
 		$data: {
 			class: sharedClasses.item,
@@ -120,7 +129,7 @@ for (let i of items) {
 		get() {
 			return {
 				title,
-				component: cache[ref] || (cache[ref] = applyStyle(new content()))
+				component: cache[ref] || (cache[ref] = applyStyle(new content(state)))
 			}
 		}
 	})

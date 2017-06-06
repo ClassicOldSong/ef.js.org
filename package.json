@@ -48,12 +48,14 @@
     "rollup-plugin-postcss": "^0.2.0",
     "rollup-plugin-progress": "^0.1.0",
     "rollup-plugin-replace": "^1.1.1",
+    "rollup-plugin-string": "^2.0.2",
     "rollup-plugin-uglify": "^1.0.1",
     "shelljs": "^0.7.5",
     "through2": "^2.0.3"
   },
   "dependencies": {
     "ef.js": "^0.3.3-alpha.3",
-    "page": "^1.7.1"
+    "page": "^1.7.1",
+    "prismjs": "^1.6.0"
   }
 }

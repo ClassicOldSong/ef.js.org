@@ -46,8 +46,8 @@
 		>br
 		.Basic syntax is shown as below:
 		>br
-		>img
-			#src = https://ooo.0o0.ooo/2017/05/12/5914aa10b3db9.png
+		>pre
+			%innerHTML = {{code2}}
 		>br
 		.Now you are ready to go! Go to the &
 		>a
