@@ -1,0 +1,16 @@
+import Hello from './hello.eft'
+
+const World = new Hello({
+	$data: {
+		name: 'World'
+	}
+})
+
+const Ef = new Hello({
+	$data: {
+		name: 'ef.js'
+	}
+})
+
+World.$mount({target: document.body})
+Ef.$mount({target: document.body})

@@ -36,18 +36,47 @@
 		. is for both template strings and ASTs, while &
 		>code
 			.t
-		. only accepts JavaScript template string.
-	>pre
-		%innerHTML = {{code1}}
+		. only accepts JavaScript template string. Here is the Hello World code:
+		>pre
+			%innerHTML = {{code1}}
+	.If you are using &
+	>a
+		#href = http://rollupjs.org/
+		#rel = noopener
+		#target = _blank
+		.rollup
+	., creating an template could be even easier with &
+	>a
+		#href = https://github.com/ClassicOldSong/rollup-plugin-eft
+		#rel = noopener
+		#target = _blank
+		.rollup-plugin-eft
+	. configured. With this plugin set up properly, you can then import any &
+	>code
+		..eft
+	. or &
+	>code
+		..ef
+	. template files directly. Here is an example:
+	>p
+		.hello.eft
+		>pre
+			%innerHTML = {{code2}}
+		.index.js
+		>pre
+			%innerHTML = {{code3}}
 	>h2
 		.What is EFML
 	>p
 		.EFML is a completely logic free template language specially designed for ef.js. As a replacement for XML-like language, EFML flattens the 3D structure of XML to completely 2D, and also provides some extra functionality such as data binding and events handling as addition.
-		>br
-		.Basic syntax is shown as below:
+	>p
+		.EFML is &
+		>b
+			.very strict to indents
+		.. Wrong indents could lead to a parsing error. Basic syntax is shown as below:
 		>br
 		>pre
-			%innerHTML = {{code2}}
+			%innerHTML = {{code4}}
 		>br
 		.Now you are ready to go! Go to the &
 		>a

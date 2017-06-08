@@ -11,7 +11,10 @@ import _guide from '../templates/guide.eft'
 import _item from '../templates/index-item.eft'
 import { applyStyle, _guides } from './guides.js'
 // Import codes
+import code1 from '../templates/guides/codes/code1.tjs'
 import code2 from '../templates/guides/codes/code2.efml'
+import code3 from '../templates/guides/codes/code3.tjs'
+import code4 from '../templates/guides/codes/code4.efml'
 
 const indexList = []
 const guides = {}
@@ -28,7 +31,10 @@ const items = [
 		content: _guides._quickStart,
 		state: {
 			$data: {
-				code2: Prism.highlight(code2, efmlSyntax)
+				code1: Prism.highlight(code1, Prism.languages.javascript),
+				code2: Prism.highlight(code2, efmlSyntax),
+				code3: Prism.highlight(code3, Prism.languages.javascript),
+				code4: Prism.highlight(code4, efmlSyntax)
 			}
 		}
 	},

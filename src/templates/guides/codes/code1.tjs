@@ -1,0 +1,17 @@
+const { create, t } = ef;
+
+const tpl = `
+>h1
+  .Hello World!
+`;
+
+const HelloWorld = create(tpl);
+
+const HelloEf = t`
+>h1
+  .Hello ef.js!
+`;
+
+(new HelloWorld()).$mount({target: document.body});
+
+(new HelloEf()).$mount({target: document.body});
