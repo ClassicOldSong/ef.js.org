@@ -57,6 +57,16 @@ const items = [
 		title: 'Events handling',
 		ref: 'events-handling',
 		content: _guides._eventsHandling
+	},
+	{
+		title: 'Mounting',
+		ref: 'mounting',
+		content: _guides._mounting
+	},
+	{
+		title: 'Bundled Rendering',
+		ref: 'bundled-rendering',
+		content: _guides._bundledRendering
 	}
 	// {
 	// 	title: '» Tags',

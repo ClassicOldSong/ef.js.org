@@ -1,0 +1,37 @@
+>section.{{class.content}}
+	>h2
+		.Example
+	>script
+		#src = //jsfiddle.net/ClassicOldSong/qxb8m3gt/embed/result,js,css/
+		#async
+	>h2
+		.Bundled operation
+	>p
+		.Use &
+		>code
+			.bundle(cb)
+		. for bundled operations. DOM will be updated right after the callback function finished it's work. You can get the bundle function from ef directly: &
+		>code
+			.import { bundle } from 'ef.js'
+		..
+	>h2
+		.Holding and Unholding
+	>p
+		.Use &
+		>code
+			.inform()
+		. to hold DOM updates, use &
+		>code
+			.exec()
+		. to unhold. Once the DOM update is held, NOTHING VISIBLE CHANGES are able to be performed. The whole ef related components are completely dead to users.
+	>p
+		.There is a counter inside ef, when you call &
+		>code
+			.inform()
+		., the counter increases by 1, when you call &
+		>code
+			.exec()
+		., the counter decreases by 1. Once the counter decreases to 0, the DOM update triggers. All cached DOM operations are then executed. Use &
+		>code
+			.exec(true)
+		. to force set counter to 0 and trigger the DOM update. It is not recommended to force update for you may break the well designed holding nest.

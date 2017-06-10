@@ -2,10 +2,10 @@
 	>h2
 		.Example
 	>script
-		#src = //jsfiddle.net/ClassicOldSong/30foa4fp/embed/result,js/
+		#src = //jsfiddle.net/ClassicOldSong/30foa4fp/embed/result,js,css/
 		#async
 	>h2
-		.Usage
+		.Binding data
 	>p
 		.Contents inside double curly braces we called "mustaches" are considered as binded value. String before &
 		>code
@@ -19,3 +19,14 @@
 		..
 	>p
 		.Mustaches can be used inside class definitions, property values, attribute values, event passing values and texts. Multiple binding mustaches can be precent in one value, which ef will handle the stitching for you.
+	>h2
+		.Updating data
+	>p
+		.All data are stored at &
+		>code
+			.$data
+		. key of the component instance. Modifying any data inside the data storage will cause an immediate update on the view level unless you hold the view update manually. ef will try to maintain the least updating operations on each operation. But if you have lots of seperated modifying operations, we suggest you using the &
+		>a
+			#href = #!guides/bundled-rendering
+			.Bundled Rendering
+		. technique.
