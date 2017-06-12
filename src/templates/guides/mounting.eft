@@ -28,3 +28,13 @@
 		>script
 			#src = //jsfiddle.net/ClassicOldSong/9f1ufzpn/embed/result,js/
 			#async
+	>h2
+		.Unmounting
+	>p
+		.Wherever your component is mounted, included the list mounting point, the &
+		>code
+			.$umount
+		. method could unmount the component automatically and correctly. Setting the mounting point to &
+		>code
+			.null
+		. or just put another component to the mounting point should also unmount the previous component automatically. Removing the component from the list could also unmount the item manually.
