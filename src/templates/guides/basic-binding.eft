@@ -16,7 +16,7 @@
 		. is considered as the default value, whose type is always &
 		>code
 			.string
-		..
+		.. If you would like a bool false to the value, just leave it empty.
 	>p
 		.Mustaches can be used inside class definitions, property values, attribute values, event passing values and texts. Multiple binding mustaches can be precent in one value, which ef will handle the stitching for you.
 	>h2
