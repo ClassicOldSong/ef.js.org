@@ -64,15 +64,15 @@ const items = [
 	}, {
 		title: 'Modulelize',
 		ref: 'modulelize',
-		content: ''
+		content: _guides._modulelize
 	}, {
 		title: 'Dig into ef',
 		ref: 'dig-into-ef',
-		content: ''
+		content: _guides._digIntoEf
 	}, {
 		title: 'AST Structure',
 		ref: 'ast-structure',
-		content: ''
+		content: _guides._astStructure
 	}
 ]
 
