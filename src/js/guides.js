@@ -6,6 +6,9 @@ import _twoWayBinding from '../templates/guides/two-way-binding.eft'
 import _eventsHandling from '../templates/guides/events-handling.eft'
 import _mounting from '../templates/guides/mounting.eft'
 import _bundledRendering from '../templates/guides/bundled-rendering.eft'
+import _modulelize from '../templates/guides/modulelize.eft'
+import _digIntoEf from '../templates/guides/dig-into-ef.eft'
+import _astStructure from '../templates/guides/ast-structure.eft'
 
 const applyStyle = (state) => {
 	state.$data.class = classes
@@ -19,7 +22,10 @@ const _guides = {
 	_twoWayBinding,
 	_eventsHandling,
 	_mounting,
-	_bundledRendering
+	_bundledRendering,
+	_modulelize,
+	_digIntoEf,
+	_astStructure
 }
 
 export { applyStyle, _guides }
