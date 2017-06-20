@@ -62,9 +62,9 @@ const items = [
 		ref: 'bundled-rendering',
 		content: _guides._bundledRendering
 	}, {
-		title: 'Modulelize',
+		title: 'Modulize',
 		ref: 'modulelize',
-		content: _guides._modulelize
+		content: _guides._modulize
 	}, {
 		title: 'Dig into ef',
 		ref: 'dig-into-ef',

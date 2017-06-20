@@ -6,7 +6,7 @@ import _twoWayBinding from '../templates/guides/two-way-binding.eft'
 import _eventsHandling from '../templates/guides/events-handling.eft'
 import _mounting from '../templates/guides/mounting.eft'
 import _bundledRendering from '../templates/guides/bundled-rendering.eft'
-import _modulelize from '../templates/guides/modulelize.eft'
+import _modulize from '../templates/guides/modulize.eft'
 import _digIntoEf from '../templates/guides/dig-into-ef.eft'
 import _astStructure from '../templates/guides/ast-structure.eft'
 
@@ -23,7 +23,7 @@ const _guides = {
 	_eventsHandling,
 	_mounting,
 	_bundledRendering,
-	_modulelize,
+	_modulize,
 	_digIntoEf,
 	_astStructure
 }
