@@ -1,3 +1,5 @@
 >section.{{class.content}}
 	>h2
-		.WIP
+		.Pre-handling
+	>p
+		.Template files can be parsed to AST before packing. It's quite simple to do this with rollup-plugin-eft.
