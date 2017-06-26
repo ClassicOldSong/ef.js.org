@@ -2,4 +2,10 @@
 	>h2
 		.Pre-handling
 	>p
-		.Template files can be parsed to AST before packing. It's quite simple to do this with rollup-plugin-eft.
+		.Template files can be parsed to AST before packing. It's quite simple to do this with &
+		>a
+			#href = https://github.com/ClassicOldSong/rollup-plugin-eft
+			#rel = noopener
+			#target = _blank
+			.rollup-plugin-eft
+		.. Templates imported will no longer require in-browser parsing which could speed up the page's first render time. Also you can get rid of mistakes in the template before publishing.
