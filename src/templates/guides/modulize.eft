@@ -8,4 +8,4 @@
 			#rel = noopener
 			#target = _blank
 			.rollup-plugin-eft
-		.. Templates imported will no longer require in-browser parsing which could speed up the page's first render time. Also you can get rid of mistakes in the template before publishing.
+		.. Templates imported will no longer require in-browser parsing, which could speed up the page's first render time. Also you can get rid of mistakes in templates before publishing.
