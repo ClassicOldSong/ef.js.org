@@ -9,3 +9,7 @@
 			#target = _blank
 			.rollup-plugin-eft
 		.. Templates imported will no longer require in-browser parsing, which could speed up the page's first render time. Also you can get rid of mistakes in templates before publishing. If someone write another type of template which supports ef.js's AST, you can also choose your favor instead of force using EFML.
+		>h2
+			.Extending Functionality
+		>p
+			.Templates imported are classes which means you can extend it to put more default features to your template.
