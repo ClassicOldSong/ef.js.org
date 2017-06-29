@@ -1,15 +1,15 @@
 import Hello from './hello.eft'
 
 const World = new Hello({
-	$data: {
-		name: 'World'
-	}
+  $data: {
+    name: 'World'
+  }
 })
 
 const Ef = new Hello({
-	$data: {
-		name: 'ef.js'
-	}
+  $data: {
+    name: 'ef.js'
+  }
 })
 
 World.$mount({target: document.body})

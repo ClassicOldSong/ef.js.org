@@ -2,7 +2,7 @@ export default {
 	'efml_line': {
 		pattern: /^.*?(\n|$)/,
 		inside: {
-			comment: /(^\s+[^\t>.#%@+-]|^[^\t>.#%@+-]).*?(\n|$)/,
+			comment: /^(\s+)?(?=[^\s>.#%@+-]).*?(\n|$)/,
 			'tag_define': {
 				pattern: /^\s*(?=>).*?(\n|$)/,
 				inside: {
