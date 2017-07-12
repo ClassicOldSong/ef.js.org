@@ -15,6 +15,7 @@ import code1 from '../templates/guides/codes/code1.tjs'
 import code2 from '../templates/guides/codes/code2.efml'
 import code3 from '../templates/guides/codes/code3.tjs'
 import code4 from '../templates/guides/codes/code4.efml'
+import code5 from '../templates/guides/codes/code5.tjs'
 
 const indexList = []
 const guides = {}
@@ -50,7 +51,11 @@ const items = [
 		ref: 'two-way-binding',
 		content: _guides._twoWayBinding
 	}, {
-		title: 'Events handling',
+		title: 'Value Subscribing',
+		ref: 'value-subscribing',
+		content: _guides._valueSubscribing
+	}, {
+		title: 'Events Handling',
 		ref: 'events-handling',
 		content: _guides._eventsHandling
 	}, {
@@ -64,12 +69,17 @@ const items = [
 	}, {
 		title: 'Modulize',
 		ref: 'modulelize',
-		content: _guides._modulize
+		content: _guides._modulize,
+		state: {
+			$data: {
+				code5: Prism.highlight(code5, Prism.languages.javascript)
+			}
+		}
 	}, {
-		title: 'Dig into ef',
-		ref: 'dig-into-ef',
-		content: _guides._digIntoEf
-	}, {
+	// 	title: 'Dig into ef',
+	// 	ref: 'dig-into-ef',
+	// 	content: _guides._digIntoEf
+	// }, {
 		title: 'AST Structure',
 		ref: 'ast-structure',
 		content: _guides._astStructure

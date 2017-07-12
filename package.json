@@ -54,7 +54,7 @@
     "through2": "^2.0.3"
   },
   "dependencies": {
-    "ef.js": "^0.3.3-alpha.3",
+    "ef.js": "^0.3.3-alpha.4",
     "page": "^1.7.1",
     "prismjs": "^1.6.0"
   }

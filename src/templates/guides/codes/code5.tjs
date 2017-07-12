@@ -1,0 +1,26 @@
+import DlgTpl from 'dlg.eft'
+
+const dlgInitialState = {
+	$data: {
+		title: 'Alert',
+		msg: 'This is an dialogue box'
+	},
+	$methods: {
+		ok({state}) {
+			state.$umount()
+			console.log('You have comfirmed the action.')
+		},
+		cancle({state}) {
+			state.$umount()
+			console.log('You have cancled the action.')
+		}
+	}
+}
+
+const DialogueBox = class extends DlgTpl {
+	constructor(state) {
+		super(Object.assign({}, dlgInitialState, state))
+	}
+}
+
+export default DialogueBox

@@ -12,4 +12,10 @@
 	>h2
 		.Extending Functionality
 	>p
-		.Templates imported are classes, which means you can extend it to put more default features to your template.
+		.Templates imported are transfromed into classes, which means you can extend it to put more default features to your template. For example:
+		>pre
+			%innerHTML = {{code5}}
+		.Now you can simply &
+		>code
+			.new DialogueBox()
+		. to get a functional dialogue box instance, while you can still modify or overwrite the initial functions and values.
