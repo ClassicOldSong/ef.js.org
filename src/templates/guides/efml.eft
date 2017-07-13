@@ -111,11 +111,11 @@
 			#target = _blank
 			.eft-parser
 	>p
-		.The parser converts the EFML template to AST that ef uses. See &
+		.The parser converts the EFML template to AST that ef uses. &
 		>a
-			#href = guides/deep-into-ef
-			.Deep Into ef
-		. section for more information about the AST format.
+			#href = guides/ast-structure
+			.AST structure
+		. will be introduced later.
 	>h2
 		.Highlighters
 	>p

@@ -13,9 +13,9 @@
 				>div.{{class.link}}.{{class.examples}}
 					@click = goto:examples
 					.EXAMPLES
-				>div.{{class.link}}.{{class.api}}
-					@click = goto:api
-					.API
+				／>div.{{class.link}}.{{class.api}}
+				／	@click = goto:api
+				／	.API
 				>div.{{class.link}}.{{class.guides}}
 					@click = goto:guides
 					.GUIDE

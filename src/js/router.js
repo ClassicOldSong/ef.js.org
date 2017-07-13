@@ -12,7 +12,7 @@ import header from './header.js'
 import getNotfound from './404.js'
 import getHome from './home.js'
 import { getGuide, guides } from './guide.js'
-import getApi from './api.js'
+// import getApi from './api.js'
 import getExamples from './examples.js'
 
 window.mainbody = mainbody
@@ -62,13 +62,13 @@ page.exit('home', (ctx, next) => {
 page('guides', () => {
 	page.redirect('guides/quick-start')
 })
-page('api', () => {
-	inform()
-	if (!cache.api) cache.api = getApi()
-	mainbody.body = cache.api
-	changePage('api')
-	exec()
-})
+// page('api', () => {
+// 	inform()
+// 	if (!cache.api) cache.api = getApi()
+// 	mainbody.body = cache.api
+// 	changePage('api')
+// 	exec()
+// })
 page('examples', () => {
 	inform()
 	if (!cache.examples) {
