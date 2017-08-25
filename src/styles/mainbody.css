@@ -19,3 +19,10 @@
 		opacity: 1;
 	}
 }
+
+.bg {
+	height: 100vh;
+	width:  100vw;
+	position:  fixed;
+	background-size: cover;
+}

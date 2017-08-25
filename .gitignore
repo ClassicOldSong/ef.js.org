@@ -15,8 +15,10 @@ cache/
 temp/
 
 # Project files
-dist/*
-test/*
+dist/*.js
+dist/*.js.map
+test/*.js
+test/*.js.map
 
 # node modules
 node_modules/

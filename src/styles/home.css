@@ -71,11 +71,11 @@
 	overflow: hidden;
 	min-height: 100px;
 	font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Amiri, Georgia, serif;
-	.titleBox {
+	& .titleBox {
 		padding-left: 140px;
 		max-width: 2140px;
 		width: calc(400vw + 140px);
-		.title {
+		& .title {
 			max-width: 500px;
 			width: calc(100vw - 36px);
 			padding: 0 62px;
@@ -92,11 +92,11 @@
 	overflow: hidden;
 	min-height: 40px;
 	margin-bottom: 10px;
-	.captionBox {
+	& .captionBox {
 		padding-left: 140px;
 		max-width: 2140px;
 		width: calc(400vw + 140px);
-		.caption {
+		& .caption {
 			max-width: 500px;
 			width: calc(100vw - 36px);
 			padding: 0 65px;
@@ -108,7 +108,7 @@
 .buttons {
 	padding-left: 64px;
 	user-select: none;
-	.button {
+	& .button {
 		float: left;
 		border: 0;
 		height: 50px;
@@ -125,7 +125,7 @@
 		&:hover {
 			border-bottom: 5px solid #FFB200;
 			box-shadow: 0 10px 30px rgba(0,0,0,.5);
-		};
+		}
 	}
 }
 

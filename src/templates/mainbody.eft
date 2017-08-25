@@ -1,6 +1,6 @@
 Main body of the website
->div.{{class.main}}.{{class.shown}}
-	>div.bg
+>body.{{class.main}}.{{class.shown}}
+	>div.{{class.bg}}
 		#style = {{style}}
 	>div.{{class.container}}
 		>div.{{class.top}}

@@ -1,0 +1,20 @@
+script: npm run build
+language: node_js
+node_js:
+- '8'
+env:
+- BUILD_ENV=CI
+cache:
+  directories:
+  - node_modules
+notifications:
+  webhooks: https://fathomless-fjord-24024.herokuapp.com/notify
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: dist
+  fqdn: ef.js.org
+  github_token:
+    - secure: iGCAHMbYOBAIWoOfPaiF0VsPiJ2KdN8dtgdriXTdchPAG8KXdslZr82CyAwJEfpXJ0a36BEd0dkpJFmiELQDd31x+VdfU3Ikj2iLwJPzerXK9uU1YWThCpywIR4PQNJv1g2s0IyqZ9re0HB8oc+siqT9GgQXqVCl9wTjvk5C33R3l3s8eS26ZjNmktJ+xtTvXys6QA06YeNevSKxl4l9EOW9wRjk2ZqlemsnarS/wLEn9r/RwA1Dhu1I6Qiyyuc2LcnEAxiVbFQlQWSVhkgtzr0M6jeoX3DnPpUXyAqP69Y9rbkCyDvTFadboJfVtmMtZy0ooYG1/HDlL28a0nLhi0ErBzlciuB43dxmfUcKgCheg+XTXEG/oFdJZms2wawVbota6xtzLNqDyz61HXENISc0uHMrTegpdTbPf08vxXQ4hLOL/8KbP3nYj2dwGMgZaOZ33vUotv2CQ4catBWUP4XhRJs7CF/wZSHUThGdiftLJ7s0W5M3bLZHycvZ4kuCGrIjASop6Zx78vkFLeAqt1fUGrLHDNrIboePBNtLvQgG9R8x8vYtUdwySplwITGmCDjvQRKXUW8LtABOP+qKCeZbEi3Cb/Xo/+iQ67l/6W2/LIzAZJFVak+yuUiafVnayaNwPLVFIRLxeDRWv0f+PtAYeOmlFMgrZ3woXqG8CzQ=
+  on:
+    branch: master

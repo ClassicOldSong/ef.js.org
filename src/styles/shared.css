@@ -59,7 +59,7 @@ html {
 	cursor: pointer;
 	&:hover, &.selected {
 		border-right: 4px solid #FFB200;
-	};
+	}
 }
 
 .showbox {

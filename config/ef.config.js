@@ -1,11 +1,7 @@
-module.exports = {
-	entry: 'src/main.js',
-	bundle: 'main.js',
-	assets: 'src/assets',
+export default {
+	input: 'src/main.js',
+	name: 'ef',
+	bundle: 'main',
 	devPath: 'test',
-	proPath: 'dist',
-	limit: 10240,
-	b64svg: false,
-	format: 'iife',
-	sourceMap: true
+	proPath: 'dist'
 }

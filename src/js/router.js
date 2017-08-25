@@ -135,7 +135,7 @@ header.$methods.goto = goto
 header.$methods.getBg = getBg
 
 const init = () => {
-	mainbody.$mount({target: document.body})
+	mainbody.$mount({target: document.body, option: 'replace'})
 	header.$data.class.logoHidden = ''
 }
 

@@ -1,40 +1,40 @@
 .content {
-	h2 {
+	& h2 {
 		border-bottom: 1px solid #CCC;
 		padding-bottom: 5px;
 		display: list-item;
 		list-style-type: decimal;
 	}
 
-	p {
+	& p {
 		margin: 10px 0;
 		line-height: 20px;
 	}
 
-	a {
+	& a {
 		text-decoration: none;
 		color: #FFB200;
 		font-weight: bold;
 		&:hover {
 			text-decoration: underline;
-		};
+		}
 	}
 
-	code {
+	& code {
 		background-color: #F3F3F3;
 		border-radius: 3px;
 		padding: 0 5px;
 		box-shadow: 0 1px 2px rgba(0,0,0,.2)
 	}
 
-	pre {
+	& pre {
 		background-color: #F3F3F3;
 		margin: 5px 0;
 		padding: 3px 5px;
 		overflow: auto;
 	}
 
-	img {
+	& img {
 		width: 100%;
 		margin: 10px 0;
 	}
