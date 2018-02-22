@@ -18,6 +18,13 @@
 		>script
 			#src = //jsfiddle.net/ClassicOldSong/e38h7zgd/embed/result,js/
 			#async
+	>h3
+		.Notice
+	>p
+		.If you want to update the raw HTML inside an element, use &
+		>code
+			.#innerHTML = {&{dynamicContent}}
+		. to operate the raw HTML inside the element. This is a dangerous operation that may break ef.js's binding which is strongly discouraged.
 	>h2
 		.List mounting
 	>p
