@@ -15,7 +15,7 @@ import postcss from 'rollup-plugin-postcss'
 import string from 'rollup-plugin-string'
 
 // Postcss plugins
-import postcssModules from 'postcss-modules'
+// import postcssModules from 'postcss-modules'
 import simplevars from 'postcss-simple-vars'
 import nested from 'postcss-nested'
 import cssnext from 'postcss-cssnext'
@@ -78,16 +78,9 @@ export default {
 				simplevars(),
 				nested(),
 				cssnext({ warnForDuplicates: false }),
-				postcssModules({
-					getJSON(id, exportTokens) {
-						cssExportMap[id] = exportTokens
-					}
-				}),
 				cssnano()
 			],
-			getExport(id) {
-				return cssExportMap[id]
-			},
+			modules: true,
 			combineStyleTags: true
 		}),
 		replace({

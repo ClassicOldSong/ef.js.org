@@ -21,7 +21,7 @@ const config = {
 	plugins,
 	watch: {
 		chokidar: true,
-		include: 'src/'
+		include: 'src/**'
 	}
 }
 
