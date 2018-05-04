@@ -8,11 +8,23 @@
 			#rel = noopener
 			#target = _blank
 			.rollup-plugin-eft
-		.. Templates imported will no longer require in-browser parsing, which could speed up the page's first render time. Also you can get rid of mistakes in templates before publishing. If someone write another type of template which supports ef.js's AST, you can also choose your favor instead of force using EFML.
+		., while &
+		>a
+			#href = https://github.com/TheNeuronProject/eft-loader
+			#rel = noopener
+			#target = _blank
+			.eft-loader
+		. does the same thing for Webpack. Templates imported will no longer require in-browser parsing, which could speed up the page's first render time. Also you can get rid of mistakes in templates before publishing. If someone write another type of template which supports ef.js's AST, you can also choose your favor instead of force using EFML.
 	>h2
 		.Extending Functionality
 	>p
-		.Templates imported are transfromed into classes, which means you can extend it to put more default features to your template. For example:
+		.Templates imported are transfromed into classes, which means you can extend it to put more default features to your template. For &
+		>a
+			#href = https://jsfiddle.net/ClassicOldSong/yp5w47pb/
+			#rel = noopener
+			#target = _blank
+			.example
+		.:
 		>pre
 			%innerHTML = {{code5}}
 		.Now you can simply &

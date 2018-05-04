@@ -1,26 +1,85 @@
-import DlgTpl from 'dlg.eft'
+const { t, mountOptions } = ef
 
-const dlgInitialState = {
-	$data: {
-		title: 'Alert',
-		msg: 'This is an dialogue box'
-	},
-	$methods: {
-		ok({state}) {
-			state.$umount()
-			console.log('You have comfirmed the action.')
-		},
-		cancle({state}) {
-			state.$umount()
-			console.log('You have cancled the action.')
-		}
-	}
+const Body = t`
+>body
+  >button
+    @click = showModal
+    .Show Modal
+  -modal
+`
+
+const ModalTpl = t`
+>div.container.{{hidden = hidden}}
+  >div.modal
+    #style = scale: {{scale}}
+    >h2
+      .This is a modal
+    >p
+      .This is some content
+    >button
+      @click.stop = cancle
+      .CANCEL
+    >button
+      @click = ok
+      .OK
+`
+
+const modalInitialState = {
+  $data: {
+    title: 'Alert',
+    msg: 'This is an dialogue box',
+    scale: 0
+  },
+  $methods: {
+    ok({state}) {
+      state.$umount()
+      console.log('You have comfirmed the action.')
+    },
+    cancle({state}) {
+      state.$umount()
+      console.log('You have cancled the action.')
+    }
+  }
 }
 
-const DialogueBox = class extends DlgTpl {
-	constructor(state) {
-		super(Object.assign({}, dlgInitialState, state))
-	}
+class MyModal extends ModalTpl {
+  constructor(state) {
+    super(Object.assign({}, modalInitialState, state))
+  }
+
+  // Adding hooks to mount method
+  $mount(...args) {
+    super.$mount(...args)
+    this.$data.hidden = ''
+    anime({
+      targets: this.$data,
+      scale: 1,
+      duration: 500,
+    })
+    console.log('The modal has been mounted!')
+  }
+
+  // Do something before unmounting
+  $umount() {
+    const umount = super.$umount
+    this.$data.hidden = 'hidden'
+    anime({
+      targets: this.$data,
+      scale: 0,
+      duration: 500,
+      complete: () => {
+        umount.call(this)
+      }
+    })
+  }
 }
 
-export default DialogueBox
+const modal = new MyModal()
+
+;(new Body({
+  $methods: {
+    showModal({state}) {
+      state.modal = new MyModal()
+    }
+  }
+})).$mount({target: document.body, option: mountOptions.REPLACE})
