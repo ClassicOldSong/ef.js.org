@@ -79,7 +79,7 @@ const modal = new MyModal()
 ;(new Body({
   $methods: {
     showModal({state}) {
-      state.modal = new MyModal()
+      state.modal = modal
     }
   }
 })).$mount({target: document.body, option: mountOptions.REPLACE})
