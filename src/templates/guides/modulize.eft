@@ -29,5 +29,5 @@
 			%innerHTML = {{code5}}
 		.Now you can simply &
 		>code
-			.new DialogueBox()
-		. to get a functional dialogue box instance, while you can still modify or overwrite the initial functions and values.
+			.new MyModal()
+		. to get a functional modal instance, while you can still modify or overwrite the initial functions and values.
