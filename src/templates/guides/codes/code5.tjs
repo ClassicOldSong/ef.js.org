@@ -1,10 +1,16 @@
-const { t, mountOptions } = ef
+const { t, mountOptions, inform, exec } = ef
 
 const Body = t`
 >body
   >button
     @click = showModal
     .Show Modal
+  >input
+  	%value = {{title = Title}}
+    #placeholder = Title
+  >input
+  	%value = {{msg = Message}}
+    #placeholder = Message
   -modal
 `
 
@@ -13,11 +19,11 @@ const ModalTpl = t`
   >div.modal
     #style = transform: scale({{scale}})
     >h2
-      .This is a modal
+      .{{title}}
     >p
-      .This is some content
+      .{{msg}}
     >button
-      @click.stop = cancle
+      @click.stop = cancel
       .CANCEL
     >button
       @click = ok
@@ -27,7 +33,7 @@ const ModalTpl = t`
 const modalInitialState = {
   $data: {
     title: 'Alert',
-    msg: 'This is an dialogue box',
+    msg: 'This is a pop up modal',
     scale: 0
   },
   $methods: {
@@ -35,9 +41,9 @@ const modalInitialState = {
       state.$umount()
       console.log('You have comfirmed the action.')
     },
-    cancle({state}) {
+    cancel({state}) {
       state.$umount()
-      console.log('You have cancled the action.')
+      console.log('You have canceld the action.')
     }
   }
 }
@@ -79,7 +85,11 @@ const modal = new MyModal()
 ;(new Body({
   $methods: {
     showModal({state}) {
+    	inform()
+    	modal.$data.title = state.$data.title
+      modal.$data.msg = state.$data.msg
       state.modal = modal
+      exec()
     }
   }
 })).$mount({target: document.body, option: mountOptions.REPLACE})
