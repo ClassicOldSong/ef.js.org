@@ -1,3 +1,4 @@
 >section.{{class.content}}
-	>h2
-		.WIP
+	>ol
+		>h2
+			.WIP

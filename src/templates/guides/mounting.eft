@@ -1,47 +1,48 @@
 >section.{{class.content}}
-	>h2
-		.Recursive Rendering demo
-	>p
-		>script
-			#src = //jsfiddle.net/ClassicOldSong/mpnuwgqx/embed/result,js,css/
-			#async
-	>h2
-		.Basic mounting
-	>p
-		.When creating a template, lines started with &
-		>code
-			.-
-		. are considered as mounting points. Contents after &
-		>code
-			.-
-		. is the key name for this mounting point. When the component is created, simply put the component you want to the right mounting point. ef should do the right thing for you.
-		>script
-			#src = //jsfiddle.net/ClassicOldSong/e38h7zgd/embed/result,js/
-			#async
-	>h3
-		.Notice
-	>p
-		.If you want to update the raw HTML inside an element, use &
-		>code
-			.#innerHTML = {&{dynamicContent}}
-		. to operate the raw HTML inside the element. This is a dangerous operation that may break ef.js's binding which is strongly discouraged.
-	>h2
-		.List mounting
-	>p
-		.Besides basic mounting, there is also way to deal with lists. While creating a template, lines started with &
-		>code
-			.+
-		. are considered as list mounting points. No list templates are accepted by now. When the component is created, put componts to the list mounting point just like what you do to normal js arrays. ef will handle all DOM render operations correctly for you correctly.
-		>script
-			#src = //jsfiddle.net/ClassicOldSong/9f1ufzpn/embed/result,js/
-			#async
-	>h2
-		.Unmounting
-	>p
-		.Wherever your component is mounted, included the list mounting point, the &
-		>code
-			.$umount
-		. method could unmount the component automatically and correctly. Setting the mounting point to &
-		>code
-			.null
-		. or just put another component to the mounting point should also unmount the previous component automatically. Removing the component from the list could also unmount the item manually.
+	>ol
+		>h2
+			.Recursive Rendering demo
+		>p
+			>script
+				#src = //jsfiddle.net/ClassicOldSong/mpnuwgqx/embed/result,js,css/
+				#async
+		>h2
+			.Basic mounting
+		>p
+			.When creating a template, lines started with &
+			>code
+				.-
+			. are considered as mounting points. Contents after &
+			>code
+				.-
+			. is the key name for this mounting point. When the component is created, simply put the component you want to the right mounting point. ef should do the right thing for you.
+			>script
+				#src = //jsfiddle.net/ClassicOldSong/e38h7zgd/embed/result,js/
+				#async
+		>h3
+			.Notice
+		>p
+			.If you want to update the raw HTML inside an element, use &
+			>code
+				.#innerHTML = {&{dynamicContent}}
+			. to operate the raw HTML inside the element. This is a dangerous operation that may break ef.js's binding which is strongly discouraged.
+		>h2
+			.List mounting
+		>p
+			.Besides basic mounting, there is also way to deal with lists. While creating a template, lines started with &
+			>code
+				.+
+			. are considered as list mounting points. No list templates are accepted by now. When the component is created, put componts to the list mounting point just like what you do to normal js arrays. ef will handle all DOM render operations correctly for you correctly.
+			>script
+				#src = //jsfiddle.net/ClassicOldSong/9f1ufzpn/embed/result,js/
+				#async
+		>h2
+			.Unmounting
+		>p
+			.Wherever your component is mounted, included the list mounting point, the &
+			>code
+				.$umount
+			. method could unmount the component automatically and correctly. Setting the mounting point to &
+			>code
+				.null
+			. or just put another component to the mounting point should also unmount the previous component automatically. Removing the component from the list could also unmount the item manually.

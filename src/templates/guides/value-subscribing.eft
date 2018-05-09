@@ -1,28 +1,29 @@
 >section.{{class.content}}
-	>h2
-		.Example
-	>p
-		>script
-			#async
-			#src = //jsfiddle.net/ClassicOldSong/q7fsuvf4/embed/result,js/
-	>h2
-		.Usage
-	>p
-		.Value subscribing lets you handle a value as soon as it changed. No matter the view update is held or not, value change will always fire your handler as soon as the value changes. Subscribe using &
-		>code
-			.instance.$subscribe('data.node.path', callback)
-		., unsubscribe using &
-		>code
-			.instance.$unsubscribe('data.node.path', callback)
-		., just like when you add an event listener to an element. ef will pass an argument to the callback function when got the new value, which you should accept it with &
-		>code
-			.callback({state, value})
-		.. &
-		>code
-			.state
-		. is the current instance while &
-		>code
-			.value
-		. is the new value. Once you successfully subscribed, the callback function will be fired immediately with current value of the data node passed to the callback function.
-	>p
-		.Remember DO NOT modify the subscribed data node with the callback function, otherwise it'll cause an infinite loop on calling and modifying.
+	>ol
+		>h2
+			.Example
+		>p
+			>script
+				#async
+				#src = //jsfiddle.net/ClassicOldSong/q7fsuvf4/embed/result,js/
+		>h2
+			.Usage
+		>p
+			.Value subscribing lets you handle a value as soon as it changed. No matter the view update is held or not, value change will always fire your handler as soon as the value changes. Subscribe using &
+			>code
+				.instance.$subscribe('data.node.path', callback)
+			., unsubscribe using &
+			>code
+				.instance.$unsubscribe('data.node.path', callback)
+			., just like when you add an event listener to an element. ef will pass an argument to the callback function when got the new value, which you should accept it with &
+			>code
+				.callback({state, value})
+			.. &
+			>code
+				.state
+			. is the current instance while &
+			>code
+				.value
+			. is the new value. Once you successfully subscribed, the callback function will be fired immediately with current value of the data node passed to the callback function.
+		>p
+			.Remember DO NOT modify the subscribed data node with the callback function, otherwise it'll cause an infinite loop on calling and modifying.

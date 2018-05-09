@@ -1,46 +1,47 @@
 >section.{{class.content}}
-	>h2
-		.Example
-	>script
-		#src = //jsfiddle.net/ClassicOldSong/t30mbck9/embed/result,js/
-		#async
-	>h2
-		.Usage
-	>p
-		.Bind events using &
-		>code
-			.@[event type].[key code 1].[key code 2].[modify key 1].[modify key 2].[capture].[stop:stopPropagation].[stopImmediate:stopImmediatePropagation].[prevent:preventDefault] = [handler name]:[value to be passed]
-		.. Note that mustaches are supported in values. Here is a demostration about value handling: &
-	>script
-		#src = //jsfiddle.net/ClassicOldSong/qk1v15rj/embed/result,js/
-		#async
-	>p
-		.Below is an example about how key handlers work. Note that wrong modify keys pressed will block the handler from responding.
-	>script
-		#src = //jsfiddle.net/ClassicOldSong/nqncusqh/embed/result,js/
-		#async
-	>p
-		.Handler functions to events are almost the same as your callback function for subscripitons, but only few differences. First, no registeration method neededs to be called while listen to an event. Just put your handler into &
-		>code
-			.$methods.methodname
-		. of your instance, it works. Second, a new argument &
-		>code
-			.e
-		. comes with the other two arguments. You should handle your arguments like this: &
-		>code
-			.handler({state, value, e})
-		.. &
-		>code
-			.state
-		. is the current instance, &
-		>code
-			.value
-		. is the value passes to the handler in your template, &
-		>code
-			.e
-		. is the original event object. Third, no firing on registering. Events only fire when you fire them in the correct way, which is different from subscribing. Fourth, no need for unregistration, set the handler in &
-		>code
-			.$methods
-		. to null or replace it with another handler should just work fine.
+	>ol
+		>h2
+			.Example
+		>script
+			#src = //jsfiddle.net/ClassicOldSong/t30mbck9/embed/result,js/
+			#async
+		>h2
+			.Usage
 		>p
-			.Subscribing and event handling is really alike, that means if you are not doing anything with the event object, you can use the same function both with subscription or events. Pretty handy, right?
+			.Bind events using &
+			>code
+				.@[event type].[key code 1].[key code 2].[modify key 1].[modify key 2].[capture].[stop:stopPropagation].[stopImmediate:stopImmediatePropagation].[prevent:preventDefault] = [handler name]:[value to be passed]
+			.. Note that mustaches are supported in values. Here is a demostration about value handling: &
+		>script
+			#src = //jsfiddle.net/ClassicOldSong/qk1v15rj/embed/result,js/
+			#async
+		>p
+			.Below is an example about how key handlers work. Note that wrong modify keys pressed will block the handler from responding.
+		>script
+			#src = //jsfiddle.net/ClassicOldSong/nqncusqh/embed/result,js/
+			#async
+		>p
+			.Handler functions to events are almost the same as your callback function for subscripitons, but only few differences. First, no registeration method neededs to be called while listen to an event. Just put your handler into &
+			>code
+				.$methods.methodname
+			. of your instance, it works. Second, a new argument &
+			>code
+				.e
+			. comes with the other two arguments. You should handle your arguments like this: &
+			>code
+				.handler({state, value, e})
+			.. &
+			>code
+				.state
+			. is the current instance, &
+			>code
+				.value
+			. is the value passes to the handler in your template, &
+			>code
+				.e
+			. is the original event object. Third, no firing on registering. Events only fire when you fire them in the correct way, which is different from subscribing. Fourth, no need for unregistration, set the handler in &
+			>code
+				.$methods
+			. to null or replace it with another handler should just work fine.
+			>p
+				.Subscribing and event handling is really alike, that means if you are not doing anything with the event object, you can use the same function both with subscription or events. Pretty handy, right?
