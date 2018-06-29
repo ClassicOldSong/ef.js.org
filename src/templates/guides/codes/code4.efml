@@ -31,6 +31,11 @@ this is a comment
   @submit.capture.stopImmediate = submit
   '.' stands for text nodes
   .Name: {{name}}&nJob: {{job}}
+  >pre
+    '|' stands for multiline text
+    |Line 1
+    |Line 2
+    |Line 3
   >br
   '-' stands for standard mounting point
   -node1
