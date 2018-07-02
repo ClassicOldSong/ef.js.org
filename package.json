@@ -1,6 +1,6 @@
 {
   "name": "ef.js.org",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Website for ef.js",
   "main": "dist/main.min.js",
   "scripts": {
